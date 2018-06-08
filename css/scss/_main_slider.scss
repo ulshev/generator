@@ -1,38 +1,49 @@
-/* start main slide styles */
+/* start main slide styles */ 
 
 #main_slide {
     overflow: hidden;
     z-index: 1;
-    //background: #0459d6 url(images/slide_bg.jpg) no-repeat center / cover;
+    background: #0459d6 url(images/generator_bg.jpg) no-repeat center / cover right;
     padding-top: 150px;
     @include transition(all);
     
     .in {
-	padding: 135px 20px;
-	@include transition(all);
+	padding: 110px 20px;
+	@include transition_slow(all);
     }
+    
     
     .text {
 	width: 50%;
 	color: #fff;
 	min-width: 670px;
-	@include transition(all);
+	@include transition_slow(all);
+	
+	.button {
+	    float: left; 
+	    margin-left: 0;
+	    
+	    .arr {
+		padding-left: 6px}	
+	    }
+	}
     }
     
     .h1 {
 	text-align: left;
-	font-size: 60px;
-	text-transform: none;
+	font-size: 77px;
+	text-transform: uppercase;
 	letter-spacing: 1.5px;
 	color: #fff;
-	@include transition(all);
+	margin-bottom: 7px;
+	@include transition_slow(all);
     }
     p {
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 162%;
 	letter-spacing: 0.5px;
 	margin-bottom: 25px;
-	max-width: 670px;
+	max-width: 570px;
     }
      
 
