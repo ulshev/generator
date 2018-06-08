@@ -1155,12 +1155,13 @@ footer {
 #main_slide {
   overflow: hidden;
   z-index: 1;
-  background: #0459d6 url(images/generator_bg.jpg) no-repeat top/cover;
+  background: #0459d6 url(images/generator_bg.jpg) no-repeat top;
   padding-top: 150px;
   -webkit-transition: all 0.8s ease 0s;
   -moz-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s; }
+  transition: all 0.8s ease 0s;
+  margin-bottom: 85px; }
   #main_slide .in {
     padding: 110px 20px;
     -webkit-transition: all 0.8s ease 0s;
@@ -1190,12 +1191,48 @@ footer {
     -webkit-transition: all 0.8s ease 0s;
     -moz-transition: all 0.8s ease 0s;
     -o-transition: all 0.8s ease 0s;
-    transition: all 0.8s ease 0s; }
+    transition: all 0.8s ease 0s;
+    margin-bottom: 314px; }
     #main_slide .text .button {
       float: left;
       margin-left: 0; }
-      #main_slide .text .button .arr {
-        padding-left: 6px; }
+  #main_slide .arr {
+    padding-left: 6px; }
+  #main_slide ol {
+    counter-reset: li; }
+    #main_slide ol li {
+      list-style: none;
+      display: inline-block;
+      font-family: "Roboto Medium";
+      color: #000;
+      margin-right: 22px;
+      font-size: 18px;
+      font-weight: 500;
+      position: relative;
+      margin-left: 14px;
+      max-width: 13%; }
+      #main_slide ol li:before {
+        margin-bottom: 22px;
+        display: block;
+        margin-top: -17px;
+        counter-increment: li;
+        content: counter(li);
+        font-family: "Roboto Black";
+        color: #6493b8;
+        font-size: 62px;
+        font-weight: bold; }
+      #main_slide ol li:after {
+        content: '';
+        display: block;
+        background-color: #6291b8;
+        width: 124px;
+        height: 2px;
+        margin-left: 71px;
+        margin-top: -93px; }
+  #main_slide ol > li:nth-child(-n+9)::before {
+    /* 1 - 9 */
+    content: "0" counter(li);
+    /* becomes 01 - 09 */ }
   #main_slide .h1 {
     text-align: left;
     font-size: 77px;
@@ -1357,5 +1394,45 @@ footer {
     width: auto;
     margin-top: 200px; } }
 /* end main slider styles */
+#catalog h2 {
+  display: inline-block;
+  font-size: 34px;
+  letter-spacing: 1px;
+  margin-bottom: 28px; }
+#catalog .button {
+  margin-top: -1px;
+  margin-right: 4px; }
+#catalog .main_catalog_text {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Roboto light";
+  line-height: normal;
+  color: #5c5c5c; }
+
+.catalog_container {
+  margin-top: 49px; }
+  .catalog_container .machine_blocks {
+    display: inline-block;
+    height: 399px;
+    width: 507px;
+    margin-right: 18px;
+    background: -webkit-linear-gradient(bottom right, #8d8d8d, #d1d1d1);
+    background: -o-linear-gradient(bottom right, #8d8d8d, #d1d1d1);
+    background: linear-gradient(to top left, #8d8d8d, #d1d1d1); }
+    .catalog_container .machine_blocks:last-child {
+      margin-left: -6px;
+      margin-right: 0; }
+    .catalog_container .machine_blocks p {
+      color: #010000;
+      display: block;
+      font-family: "Oswald"; }
+      .catalog_container .machine_blocks p a {
+        display: inline-block;
+        color: #080808;
+        font-family: "Oswald"; }
+        .catalog_container .machine_blocks p a:hover {
+          color: #fff; }
+  .catalog_container .machine_blocks:hover {
+    background-color: #fff; }
 
 /*# sourceMappingURL=template_styles.css.map */

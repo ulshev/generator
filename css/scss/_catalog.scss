@@ -1,0 +1,52 @@
+#catalog
+{
+	h2{
+		display: inline-block;
+		font-size: 34px;
+		letter-spacing: 1px;
+		margin-bottom: 28px;
+	}
+	.button{
+		margin-top: -1px;
+		margin-right: 4px;
+	}
+	.main_catalog_text{
+		font-size: 14px;
+    font-weight: 300;
+    font-family: "Roboto light";
+    line-height: normal;
+	color: #5c5c5c;	
+	}
+}
+.catalog_container{margin-top: 49px;
+	.machine_blocks{
+		display: inline-block;
+		height: 399px;
+		width: 507px;
+		margin-right: 18px;
+        background: -webkit-linear-gradient(bottom right, #8d8d8d, #d1d1d1);
+        background: -o-linear-gradient(bottom right, #8d8d8d, #d1d1d1);
+        background: linear-gradient(to top left, #8d8d8d, #d1d1d1);
+		&:last-child{
+			margin-left: -6px;
+			margin-right: 0;
+		}
+		p{
+			color: #010000;
+			display: block;
+			font-family: "Oswald";
+		
+		a{
+			display: inline-block;
+			color: #080808;
+			font-family: "Oswald";
+			&:hover{
+				color: #fff;
+			}
+			}
+	}
+	}
+	.machine_blocks:hover{
+		background-color: #fff;
+	}
+}
