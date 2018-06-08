@@ -1155,7 +1155,7 @@ footer {
 #main_slide {
   overflow: hidden;
   z-index: 1;
-  background: #0459d6 url(images/generator_bg.jpg) no-repeat center/cover right;
+  background: #0459d6 url(images/generator_bg.jpg) no-repeat top/cover;
   padding-top: 150px;
   -webkit-transition: all 0.8s ease 0s;
   -moz-transition: all 0.8s ease 0s;

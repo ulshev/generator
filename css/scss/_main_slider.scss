@@ -3,7 +3,7 @@
 #main_slide {
     overflow: hidden;
     z-index: 1;
-    background: #0459d6 url(images/generator_bg.jpg) no-repeat center / cover right;
+    background: #0459d6 url(images/generator_bg.jpg) no-repeat top / cover;
     padding-top: 150px;
     @include transition_slow(all);
     
