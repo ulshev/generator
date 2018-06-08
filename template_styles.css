@@ -1197,7 +1197,8 @@ footer {
       float: left;
       margin-left: 0; }
   #main_slide .arr {
-    padding-left: 6px; }
+    padding-left: 6px;
+    display: inline-block; }
   #main_slide ol {
     counter-reset: li; }
     #main_slide ol li {
@@ -1394,45 +1395,72 @@ footer {
     width: auto;
     margin-top: 200px; } }
 /* end main slider styles */
-#catalog h2 {
-  display: inline-block;
-  font-size: 34px;
-  letter-spacing: 1px;
-  margin-bottom: 28px; }
-#catalog .button {
-  margin-top: -1px;
-  margin-right: 4px; }
-#catalog .main_catalog_text {
-  font-size: 14px;
-  font-weight: 300;
-  font-family: "Roboto light";
-  line-height: normal;
-  color: #5c5c5c; }
+#catalog {
+  padding-bottom: 84px; }
+  #catalog h2 {
+    display: inline-block;
+    font-size: 34px;
+    letter-spacing: 1px;
+    margin-bottom: 28px; }
+  #catalog .button {
+    margin-top: -1px;
+    margin-right: 4px; }
+  #catalog .main_catalog_text {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: "Roboto light";
+    line-height: normal;
+    color: #5c5c5c; }
 
 .catalog_container {
-  margin-top: 49px; }
+  margin-top: 49px;
+  background-image: url(images/catalog_bg.jpg); }
   .catalog_container .machine_blocks {
+    overflow: hidden;
     display: inline-block;
     height: 399px;
-    width: 507px;
+    width: 32.5%;
     margin-right: 18px;
     background: -webkit-linear-gradient(bottom right, #8d8d8d, #d1d1d1);
     background: -o-linear-gradient(bottom right, #8d8d8d, #d1d1d1);
     background: linear-gradient(to top left, #8d8d8d, #d1d1d1); }
+    .catalog_container .machine_blocks:hover {
+      background: linear-gradient(to top left, #3665b0, #6ec2f0);
+      cursor: pointer; }
     .catalog_container .machine_blocks:last-child {
       margin-left: -6px;
       margin-right: 0; }
+    .catalog_container .machine_blocks img {
+      margin-top: -70px;
+      margin-left: 153px; }
     .catalog_container .machine_blocks p {
       color: #010000;
       display: block;
-      font-family: "Oswald"; }
+      font-family: "Oswald";
+      margin-left: 62px;
+      margin-top: 21px;
+      padding-bottom: 7px;
+      font-size: 25px;
+      text-transform: uppercase; }
+      .catalog_container .machine_blocks p:hover {
+        color: #fff; }
+      .catalog_container .machine_blocks p span {
+        display: block; }
       .catalog_container .machine_blocks p a {
         display: inline-block;
         color: #080808;
-        font-family: "Oswald"; }
-        .catalog_container .machine_blocks p a:hover {
-          color: #fff; }
-  .catalog_container .machine_blocks:hover {
-    background-color: #fff; }
+        font-family: "Oswald";
+        font-size: 15px;
+        display: block; }
+        .catalog_container .machine_blocks p a .arr {
+          display: inline-block; }
+
+#mechanism {
+  padding-top: 100px; }
+  #mechanism h2 {
+    display: block;
+    font-size: 34px;
+    letter-spacing: 1px;
+    text-align: center; }
 
 /*# sourceMappingURL=template_styles.css.map */
