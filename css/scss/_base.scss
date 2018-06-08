@@ -38,10 +38,10 @@ body {
     line-height: 193%;
     font-weight: 300;
     color: $color_text;
-    -webkit-font-smoothing: subpixel-antialiased !important;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility:    hidden;
-    -ms-backface-visibility:     hidden;
+    //-webkit-font-smoothing: subpixel-antialiased !important;
+    //-webkit-backface-visibility: hidden;
+    //-moz-backface-visibility:    hidden;
+    //-ms-backface-visibility:     hidden;
     //font-smoothing: antialiased;
     letter-spacing: 0.5px;
 }

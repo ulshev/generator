@@ -3,37 +3,20 @@
 #main_slide {
     overflow: hidden;
     z-index: 1;
-    background: #0459d6 url(images/slide_bg.jpg) no-repeat center / cover;
+    //background: #0459d6 url(images/slide_bg.jpg) no-repeat center / cover;
     padding-top: 150px;
-    @include transition_slow(all);
+    @include transition(all);
     
     .in {
 	padding: 135px 20px;
-	@include transition_slow(all);
-    }
-    
-    .main_img {
-	position: absolute;
-	width: 1015px;
-	left: 46%;
-	top: 0;
-	height: 100%;
-	background: url(images/main_img_bg.png) no-repeat center / auto 100% ;
-	text-align: center;
 	@include transition(all);
-	
-	img {
-	    max-width: 96%;
-	    position: relative;
-	    left: 4%;
-	}
     }
     
     .text {
 	width: 50%;
 	color: #fff;
 	min-width: 670px;
-	@include transition_slow(all);
+	@include transition(all);
     }
     
     .h1 {
@@ -42,7 +25,7 @@
 	text-transform: none;
 	letter-spacing: 1.5px;
 	color: #fff;
-	@include transition_slow(all);
+	@include transition(all);
     }
     p {
 	font-size: 16px;
@@ -51,252 +34,36 @@
 	margin-bottom: 25px;
 	max-width: 670px;
     }
-    
-    ul {
-        padding-top: 70px;
-	font-size: 12px;
-	line-height: 145%;
-	height: 117px;
-	min-width: 770px;
-	padding-bottom: 20px;
-	letter-spacing: 0.7px;
-	text-transform: uppercase;
-	@include transition(all);
-                
-        li {
-	    display: inline-block;
-            vertical-align: middle;
-            margin: 0 33px 20px 0;
-	    padding-left: 0;
-	    font-weight: 700;
-	    
-	    &:before {
-		display: none;
-	    }
-	    
-	    &:after {
-		border-right: 1px solid #0d70ec;
-		margin-left: 40px;
-		content: "";
-		display: inline-block;
-		vertical-align: middle;
-		height: 21px;
-	    }
-	    
-	
-	    &:last-child {
-		margin-right: 0;
-		&:after {
-		    display: none;
-		}
-	    }
-	    
-	    
-	    .icon {
-		display: inline-block;
-		background-repeat: no-repeat;
-		background-position: left center;
-		//width: 40px;
-		//height: 37px;
-		vertical-align: middle;
-		margin-right: 10px;
-	    }
-        }
-    }
+     
+
 }
 
 @media screen and (max-width: 1600px) {
-    #main_slide {
-	.in {
-	    padding: 115px 20px 80px;
-	}
-	.main_img {
-	    width: 64%;
-	    left: 44%;
-	    //background-size: auto 100%;
-	    img {
-		top: 0%;
-		max-width: 90%;
-	    }
-	}
-	
-	.h1 {
-	    font-size: 50px;
-	}
-	
-	ul {
-	    li {
-		margin: 0 20px 20px 0;
-		
-		&:after {
-		    margin-left: 20px;
-		}
-	    }
-	}
-    }
+
 }
 
 @media screen and (max-width: 1300px) {
-    #main_slide {
-	padding-top: 80px;
-	.in {
-	    padding: 95px 20px 50px;
-	}
-	.main_img {
-	    width: 64%;
-	    left: 37%;
-	    background-size: auto 115%;
-	    img {
-		top: 5%;
-		max-width: 95%;
-	    }
-	}
-	.text {
-	    width: 50%;
-	    min-width: inherit;
-	}
-	
-	p {
-	    font-size: 14px;
-	    line-height: 162%;
-	    letter-spacing: 0.5px;
-	}
-	
-	.h1 {
-	    font-size: 40px;
-	}
-	
-	ul {
-	    min-width:  inherit;
-	    padding-top: 30px;
-	    max-width: 300px;
-	    //padding-bottom: 50px;
-	    height: auto;
-	    
-	    li:after {
-		border-right: 0;
-	    }
-	    
-	    span {
-		margin-right: 10px;
-	    }
-	}
-    }
 
 }
 @media screen and (max-width: 999px) {
-    #main_slide {
-	.in {
-	    padding: 30px 20px 50px;
-	}
-	.main_img {
-	    img {
-		top: 5%;
-		max-width: 100%;
-	    }
-	}
-	
-	.button {
-	    height: 51px;
-	    line-height: 51px;
-	    width: auto;
-	}
-	
-	.h1 {
-	    font-size: 35px;
-	}
-	p {
-	    font-size: 14px;
-	}
-    }
+
 }
 
 @media screen and (max-width: 800px) {
-    #main_slide {
-	.main_img {
-	    background-size: auto 100%;
-	    img {
-		top: 10%;
-		max-width: 100%;
-	    }
-	}
-	
-	.button {
-	    height: 51px;
-	    line-height: 51px;
-	    width: auto;
-	}
-	
-	.h1 {
-	    font-size: 30px;
-	}
-	ul {
-	    //padding-bottom: 0;
-	}
-    }
+
 }
 @media screen and (max-width: 700px) {
-    #main_slide {
-	ul {
-	    display: none;
-	}
-    }
+ 
 }
 @media screen and (max-width: 600px) {
-    #main_slide {
-	
-	
-	.h1 {
-	    font-size: 25px;
-	}
-	p {
-	    font-size: 12px;
-	}
-	
-	a.button, span.button {
-	    height: 41px;
-	    line-height: 39px;
-	    min-width: 100px;
-	 }
-    }
+
 }
 
 @media screen and (max-width: 500px) {
-    #main_slide {
-	.main_img {
-	    background:none;
-	    left: 44%;
-	    top: 15%;
-	    
-	    img {
-		width: 300px;
-	    }
-	}
-	.text {
-	    width: 60%;
-	}
-	
-    }
+
 }
 @media screen and (max-width: 400px) {
-    #main_slide {
-	.main_img {
-	    background:none;
-	    width: 100%;
-	    left: 0;
-	    top: 0;
-	    text-align:  left;
-	    
-	    img {
-		width: 300px;
-	    }
-	}
-	.text {
-	    width: auto;
-	    margin-top: 200px;
-	}
-	
-    }
+
 }
 
 /* end main slider styles */
