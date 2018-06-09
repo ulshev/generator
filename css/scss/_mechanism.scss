@@ -1,0 +1,50 @@
+#mechanism
+{
+	padding-top: 100px;padding-bottom: 105px;
+	h2{
+		display: block;
+		font-size: 34px;
+		letter-spacing: 1px;
+		text-align: center;
+	}
+}
+.container_for_mechanisms{
+	.small_mechanism{
+	display: inline-block;	
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	border-right: 1px solid #e5e5e5;
+	width: 311px;
+	height: 311px;	
+		&:last-child{
+			border-right: none;
+			margin-left: -13px;
+		}
+		&:hover{
+			border-color:  #19224d;
+			box-shadow: 0px 0px 6px 0px rgba(238,238,238,0.75);
+			border-right: 1px solid  #19224d;
+		}
+		img{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 22px;
+			margin-top: 35px;
+		}
+		
+		
+		
+		
+		b{
+			font-family: "Oswald";
+			font-weight: 500;
+			font-size: 24px;
+			text-transform: uppercase;
+			display: block;
+			color: #0d121f;
+			text-align: center;
+			
+		}
+	}
+}

@@ -1189,12 +1189,13 @@ footer .social a:hover img.hover {
 #main_slide {
   overflow: hidden;
   z-index: 1;
-  background: #0459d6 url(images/generator_bg.jpg) no-repeat center/cover right;
+  background: #0459d6 url(images/generator_bg.jpg) no-repeat top;
   padding-top: 150px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  -moz-transition: all 0.8s ease 0s;
+  -o-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+  margin-bottom: 85px;
 }
 #main_slide .in {
   padding: 110px 20px;
@@ -1211,13 +1212,55 @@ footer .social a:hover img.hover {
   -moz-transition: all 0.8s ease 0s;
   -o-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
+  margin-bottom: 314px;
 }
 #main_slide .text .button {
   float: left;
   margin-left: 0;
 }
-#main_slide .text .button .arr {
+#main_slide .arr {
   padding-left: 6px;
+  display: inline-block;
+}
+#main_slide ol {
+  counter-reset: li;
+}
+#main_slide ol li {
+  list-style: none;
+  display: inline-block;
+  font-family: "Roboto Medium";
+  color: #000;
+  margin-right: 22px;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  margin-left: 14px;
+  max-width: 13%;
+}
+#main_slide ol li:before {
+  margin-bottom: 22px;
+  display: block;
+  margin-top: -17px;
+  counter-increment: li;
+  content: counter(li);
+  font-family: "Roboto Black";
+  color: #6493b8;
+  font-size: 62px;
+  font-weight: bold;
+}
+#main_slide ol li:after {
+  content: '';
+  display: block;
+  background-color: #6291b8;
+  width: 124px;
+  height: 2px;
+  margin-left: 71px;
+  margin-top: -93px;
+}
+#main_slide ol > li:nth-child(-n+9)::before {
+  /* 1 - 9 */
+  content: "0" counter(li);
+  /* becomes 01 - 09 */
 }
 #main_slide .h1 {
   text-align: left;
@@ -1240,5 +1283,200 @@ footer .social a:hover img.hover {
 }
 
 /* end main slider styles */
+#catalog {
+  padding-bottom: 84px;
+}
+#catalog h2 {
+  display: inline-block;
+  font-size: 34px;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
+}
+#catalog .button {
+  margin-top: -1px;
+  margin-right: 4px;
+}
+#catalog .main_catalog_text {
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Roboto light";
+  line-height: normal;
+  color: #5c5c5c;
+}
+
+.catalog_container {
+  margin-top: 49px;
+  background-image: url(images/catalog_bg.jpg);
+}
+.catalog_container .machine_blocks {
+  overflow: hidden;
+  display: inline-block;
+  height: 399px;
+  width: 32.5%;
+  margin-right: 18px;
+  background: -webkit-linear-gradient(bottom right, #8d8d8d, #d1d1d1);
+  background: -o-linear-gradient(bottom right, #8d8d8d, #d1d1d1);
+  background: linear-gradient(to top left, #8d8d8d, #d1d1d1);
+}
+.catalog_container .machine_blocks:hover {
+  background: linear-gradient(to top left, #3665b0, #6ec2f0);
+  cursor: pointer;
+}
+.catalog_container .machine_blocks:last-child {
+  margin-left: -6px;
+  margin-right: 0;
+}
+.catalog_container .machine_blocks img {
+  margin-top: -70px;
+  margin-left: 153px;
+}
+.catalog_container .machine_blocks p {
+  color: #010000;
+  display: block;
+  font-family: "Oswald";
+  margin-left: 62px;
+  margin-top: 21px;
+  padding-bottom: 7px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+.catalog_container .machine_blocks p:hover {
+  color: #fff;
+}
+.catalog_container .machine_blocks p span {
+  display: block;
+}
+.catalog_container .machine_blocks p a {
+  display: inline-block;
+  color: #080808;
+  font-family: "Oswald";
+  font-size: 15px;
+  display: block;
+}
+.catalog_container .machine_blocks p a .arr {
+  display: inline-block;
+}
+
+#mechanism {
+  padding-top: 100px;
+  padding-bottom: 105px;
+}
+#mechanism h2 {
+  display: block;
+  font-size: 34px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.container_for_mechanisms .small_mechanism {
+  display: inline-block;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-right: 1px solid #e5e5e5;
+  width: 311px;
+  height: 311px;
+}
+.container_for_mechanisms .small_mechanism:last-child {
+  border-right: none;
+  margin-left: -13px;
+}
+.container_for_mechanisms .small_mechanism:hover {
+  border-color: #19224d;
+  box-shadow: 0px 0px 6px 0px rgba(238, 238, 238, 0.75);
+  border-right: 1px solid  #19224d;
+}
+.container_for_mechanisms .small_mechanism img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 22px;
+  margin-top: 35px;
+}
+.container_for_mechanisms .small_mechanism b {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-size: 24px;
+  text-transform: uppercase;
+  display: block;
+  color: #0d121f;
+  text-align: center;
+}
+
+#service .container_service .main_service_blocks {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 84px;
+}
+#service .container_service .main_service_blocks .blur_block {
+  background-color: #fff;
+  opacity: 0.75;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 67.7%;
+  margin-top: 98px;
+  padding-bottom: 59px;
+}
+#service .container_service .main_service_blocks .blur_block .button {
+  float: none;
+  margin-left: 0;
+  margin-top: 0;
+  color: black;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: black;
+}
+#service .container_service .main_service_blocks .blur_block .button:hover {
+  color: #fff;
+  background-color: #1992d1;
+}
+#service .container_service .main_service_blocks .blur_block h3 {
+  padding-top: 53px;
+  font-size: 34px;
+  letter-spacing: 1.7px;
+  text-align: center;
+  margin-left: 21px;
+}
+#service .container_service .main_service_blocks .blur_block p {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+#service .main_service_blocks:nth-child(1) {
+  background-image: url(images/service_first_img1.jpg);
+  background-size: 100%;
+  float: left;
+  background-repeat: no-repeat;
+}
+#service .main_service_blocks:nth-child(1):hover {
+  background-image: url(images/service_second_img1.jpg);
+}
+#service .main_service_blocks:nth-child(2) {
+  background-image: url(images/service_first_img2.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+#service .main_service_blocks:nth-child(2):hover {
+  background-image: url(images/service_second_img2.jpg);
+}
+
+.arr {
+  padding-left: 6px;
+}
+
+#about_company .about_content {
+  display: inline-block;
+  width: 38%;
+  float: right;
+  padding-top: 104px;
+  padding-right: 209px;
+}
+#about_company h2 {
+  display: inline-block;
+  font-size: 25px;
+}
+
+.about_logo {
+  margin-left: -129px;
+}
 
 /*# sourceMappingURL=template_styles.css.map */

@@ -3,9 +3,10 @@
 #main_slide {
     overflow: hidden;
     z-index: 1;
-    background: #0459d6 url(images/generator_bg.jpg) no-repeat center / cover right;
+    background: #0459d6 url(images/generator_bg.jpg) no-repeat top ;
     padding-top: 150px;
-    @include transition(all);
+    @include transition_slow(all);
+	margin-bottom: 85px;
     
     .in {
 	padding: 110px 20px;
@@ -18,16 +19,52 @@
 	color: #fff;
 	min-width: 670px;
 	@include transition_slow(all);
-	
-	.button {
-	    float: left; 
-	    margin-left: 0;
-	    
-	    .arr {
-		padding-left: 6px;
-	    }
-	}
+	margin-bottom: 314px;	
+		.button
+		{
+			float: left; 
+			margin-left: 0;
+		}
+		
     }
+	.arr{padding-left: 6px;display: inline-block;}	
+	ol{counter-reset: li;
+			li{list-style: none;
+			display: inline-block;
+			font-family: "Roboto Medium";	
+			color: #000;	
+			margin-right: 22px;
+			font-size: 18px;
+			font-weight: 500;	
+position: relative;
+			margin-left: 14px;
+			max-width: 13%;
+				&:before{
+				margin-bottom: 22px;	
+				display: block;
+				margin-top: -17px;
+				counter-increment: li;
+				content: counter(li);	
+				font-family: "Roboto Black";
+				color:  #6493b8;	
+				font-size: 62px;
+				font-weight: bold;
+				}
+				&:after{
+					content: '';
+					display: block;
+					background-color: #6291b8;
+					width: 124px;
+					height: 2px;
+					margin-left: 71px;
+					margin-top: -93px;
+					
+				}
+			}
+		}
+	ol > li:nth-child(-n+9)::before { /* 1 - 9 */
+    content: "0" counter(li); /* becomes 01 - 09 */
+}
     
     .h1 {
 	text-align: left;
