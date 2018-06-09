@@ -35,7 +35,6 @@
 
 				}
 				p{
-					font-family: "Roboto";
 					font-weight: 300;
 				}
 			}
@@ -43,22 +42,15 @@
 	}
 	
 	.main_service_blocks:nth-child(1){
-		background-image: url(images/service_first_img1.jpg);
+		background-image: url(images/service_second_img1.jpg);
 		background-size: 100%;
 		float: left;
 		background-repeat: no-repeat;
-		&:hover{
-			background-image: url(images/service_second_img1.jpg);
-		}
 	}
 	.main_service_blocks:nth-child(2){
-		background-image: url(images/service_first_img2.jpg);
+		background-image: url(images/service_second_img2.jpg);
 		background-size: 100%;
 		background-repeat: no-repeat;
-		&:hover{
-			background-image: url(images/service_second_img2.jpg);
-			
-		}
 	}
 	
 	

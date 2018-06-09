@@ -30,8 +30,7 @@
 	.arr{padding-left: 6px;display: inline-block;}	
 	ol{counter-reset: li;
 			li{list-style: none;
-			display: inline-block;
-			font-family: "Roboto Medium";	
+			display: inline-block;	
 			color: #000;	
 			margin-right: 22px;
 			font-size: 18px;
@@ -45,7 +44,6 @@ position: relative;
 				margin-top: -17px;
 				counter-increment: li;
 				content: counter(li);	
-				font-family: "Roboto Black";
 				color:  #6493b8;	
 				font-size: 62px;
 				font-weight: bold;
