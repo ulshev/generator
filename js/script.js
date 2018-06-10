@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
 	$('input,textarea').focus(function(){
 	    $(this).data('placeholder',$(this).attr('placeholder'))
 	    $(this).attr('placeholder','');
@@ -28,16 +26,20 @@ $(document).ready(function() {
 	    $('body,html').animate({scrollTop: top}, 500);
 	});
 	
-	// шапка при прокрутке
+	// шапка и первый слайдер при прокрутке
 	$(window).on('load scroll', function() {
-	    if($(this).scrollTop() != 0) {
+	    var height = $(window).height() - 100;
+	    if($(this).scrollTop() > height) {
 		$('#header').addClass('scroll');
 	    } else {
 		$('#header').removeClass('scroll');
 	    }
+	    
+	    var height_main_slide = $('#main_slide').height();
+	    $('#catalog').css('margin-top', height_main_slide);
+	    
 	});
 
-	
 	// класс меню с подменю
 	$('.main_menu > li').each(function(){
 		var list = $(this).children('ul');
@@ -47,7 +49,7 @@ $(document).ready(function() {
 		};
 	});
 	// открытие подменю
-	if ( window.innerWidth < 1301 ) {
+	if ( window.innerWidth < 1451 ) {
 	    $('.main_menu .submenu > a').on('click', function(e){
 		    if( !$(this).parent().hasClass('show') ) {
 			$(this).parent().addClass('show');  
