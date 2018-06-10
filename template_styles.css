@@ -1523,7 +1523,6 @@ footer .social a:hover img {
 #catalog .main_catalog_text {
   font-size: 14px;
   font-weight: 300;
-  font-family: "Roboto light";
   line-height: normal;
   color: #5c5c5c;
 }
@@ -1662,31 +1661,27 @@ footer .social a:hover img {
   margin-left: 21px;
 }
 #service .container_service .main_service_blocks .blur_block p {
-  font-family: "Roboto";
   font-weight: 300;
 }
 #service .main_service_blocks:nth-child(1) {
-  background-image: url(images/service_first_img1.jpg);
+  background-image: url(images/service_second_img1.jpg);
   background-size: 100%;
   float: left;
   background-repeat: no-repeat;
 }
-#service .main_service_blocks:nth-child(1):hover {
-  background-image: url(images/service_second_img1.jpg);
-}
 #service .main_service_blocks:nth-child(2) {
-  background-image: url(images/service_first_img2.jpg);
+  background-image: url(images/service_second_img2.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
-}
-#service .main_service_blocks:nth-child(2):hover {
-  background-image: url(images/service_second_img2.jpg);
 }
 
 .arr {
   padding-left: 6px;
 }
 
+#about_company {
+  position: relative;
+}
 #about_company .about_content {
   display: inline-block;
   width: 38%;
@@ -1694,13 +1689,67 @@ footer .social a:hover img {
   padding-top: 104px;
   padding-right: 209px;
 }
+#about_company .about_content p {
+  font-weight: 300;
+  font-size: 14px;
+  margin-left: 29px;
+  margin-top: -9px;
+  line-height: 23px;
+  margin-bottom: 14px;
+}
+#about_company .about_content .button {
+  float: none;
+  margin-left: 29px;
+  margin-top: 10px;
+}
 #about_company h2 {
   display: inline-block;
-  font-size: 25px;
+  font-size: 24px;
+  line-height: 38px;
+  margin-bottom: 0;
+}
+#about_company ol {
+  counter-reset: li;
+}
+#about_company ol li {
+  list-style: none;
+  display: inline-block;
+  color: #000;
+  margin-right: 22px;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  margin-left: 14px;
+  max-width: 13%;
+}
+#about_company ol li:before {
+  margin-bottom: 22px;
+  display: block;
+  margin-top: -17px;
+  counter-increment: li;
+  content: counter(li);
+  color: #6493b8;
+  font-size: 62px;
+  font-weight: bold;
+}
+#about_company ol li:after {
+  content: '';
+  display: block;
+  background-color: #6291b8;
+  width: 124px;
+  height: 2px;
+  margin-left: 71px;
+  margin-top: -93px;
+}
+#about_company ol > li:nth-child(-n+9)::before {
+  /* 1 - 9 */
+  content: "0" counter(li);
+  /* becomes 01 - 09 */
 }
 
 .about_logo {
   margin-left: -129px;
+  margin-bottom: 31px;
 }
 
 /*# sourceMappingURL=template_styles.css.map */
