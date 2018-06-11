@@ -9,6 +9,7 @@ background-color: #fff;
 		text-align: center;
 	}
 	.button_block{text-align: center;
+		margin-top: 53px;
 	.button{
 		.arr{transform: rotate(-1500grad);}
 		float: none;
@@ -23,6 +24,7 @@ background-color: #fff;
 	border-right: 1px solid #e5e5e5;
 	width: 311px;
 	height: 311px;	
+	vertical-align: top;
 		&:last-child{
 			border-right: none;
 			margin-left: -13px;
