@@ -1,4 +1,6 @@
 #service{
+	z-index: 1;
+	background-color: #fff;
 	.container_service{
 		.main_service_blocks{
 			display: inline-block;
@@ -56,7 +58,4 @@
 	
 	
 	
-}
-.arr{
-	padding-left: 6px;
 }

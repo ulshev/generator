@@ -1,11 +1,18 @@
-#mechanism
-{
+#mechanism 
+{z-index: 1;
+background-color: #fff;	
 	padding-top: 100px;padding-bottom: 105px;
 	h2{
 		display: block;
 		font-size: 34px;
 		letter-spacing: 1px;
 		text-align: center;
+	}
+	.button_block{text-align: center;
+	.button{
+		.arr{transform: rotate(-1500grad);}
+		float: none;
+	}
 	}
 }
 .container_for_mechanisms{
