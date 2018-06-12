@@ -1,0 +1,255 @@
+/* start forms styles */
+
+
+#contacts_page {
+    
+}
+
+.form_block { 
+    
+    form {
+	a {
+	    color: #fff;
+	    text-decoration: none;
+	    
+	    &:hover {
+		text-decoration: underline;
+	    }
+	}
+    }
+    input, textarea, select {
+	padding: 5px 10px 5px 40px;
+	margin: 0 15px 14px 0;
+	width: 100%;
+	max-width: 320px;
+	height: 45px;
+	outline: none;
+	border: 1px solid #fff;
+	border-radius: 7px;
+	font-family: $font_family_os;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 35px;
+	color: #fff;;
+        vertical-align: middle;
+	box-sizing: border-box;
+	background: transparent no-repeat 13px center;
+	
+	@include transition(all);
+	
+	
+	&::-webkit-input-placeholder {opacity: 1; color: #fff;}
+	&::-moz-placeholder          {opacity: 1; color: #ffft;}/* Firefox 19+ */
+	&:-moz-placeholder           {opacity: 1; color: #fff;}/* Firefox 18- */
+	&:-ms-input-placeholder      {opacity: 1; color: #fff;}
+	
+	
+	&:hover, &:focus, &:active {
+	    background-color: transparent;
+	}
+	
+	&.name {
+	    background-image: url(images/icon_man.png);
+	}
+	&.tel {
+	    background-image: url(images/icon_tel.png);
+	}
+    }
+    
+    
+    .gUniForm input[type="text"] {
+	padding: 5px 20px;
+	height: 49px;
+    }
+    
+    .gUniForm input:focus, .gUniForm textarea:focus, .gUniForm select:focus {
+	//border-color: transparent;
+	//border-bottom: 1px solid #fff;
+	//background-color: transparent;
+    }
+    
+    
+    textarea, input.textarea {
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 100px;
+	max-height: 100px;
+	resize: none;
+	margin-bottom: 15px;
+    }
+    
+    input[type="radio"], input[type="checkbox"] {
+	width: auto;
+	height: auto;
+	margin-bottom: 0;
+	opacity: 0;
+	margin-left: -2px;
+	position: absolute;
+	margin-right: 0;
+    }
+    
+    input[type="checkbox"]:not(checked) + label, &.gUniForm input[type="checkbox"]:not(checked) + label {
+	display: inline-block;
+	position: relative;
+	//vertical-align: middle;
+	border: 1px solid transparent;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 145%;
+	letter-spacing: 0px;
+	//margin-top: 10px;
+	cursor: pointer;
+	padding-left: 25px;
+	//color: #999999;
+	
+	
+	&:before {
+	    content: '';
+	    width: 14px;
+	    height: 14px;
+	    background: rgba(255, 255, 255, 0.4) no-repeat center;
+	    border-radius: 0px !important;
+	    position: absolute;
+	    left: 0;
+	    border: 1px solid #fff;
+	}
+	&:after {
+	    content: '';
+	    width: 18px;
+	    height: 14px;
+	    background: url(images/checkbox.png) no-repeat center;
+	    position: absolute;
+	    left: 2px;
+	    top: -2px;
+	}
+	
+	&:hover:before {
+	    opacity: 0.8;
+	}
+    }
+    //input[type="checkbox"]:not(checked) + label {
+	//&:hover:before {
+	    //background-position:  center;
+	//}
+    //}
+    input[type="checkbox"]:checked + label {
+	&:before {
+	    //background: $color_a;
+	    //background: url(images/checkbox.png) no-repeat center;
+	    //border-color: rgba(13, 157, 246, 0.6);
+	}
+	&:after {
+	    display: none;
+	}
+    }
+    input[type="checkbox"]:checked + label {
+	&:hover:before {
+	    //background-position:  center;
+	}
+    }
+    input[type="checkbox"] + label + a {
+	display: inline-block;
+	//vertical-align: middle;
+	margin-bottom: 35px;
+	margin-right: -20px;
+	//margin-top: 10px;
+	font-size: 12px;
+	font-weight: 400;
+    }
+    .button_block, .uFormButton, .gUniFormButtonContainter {
+	display: inline-block;
+    }
+    button[type="submit"], .uFormSubmit, .gUniFormSuccessButton {
+	margin-right: 0;
+        margin-bottom: 14px;
+	padding: 0 25px 0 25px;
+        width: 205px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 14px;
+	font-weight: 400;
+	background: $color_a;
+	color: #fff;
+	cursor: pointer;
+	box-sizing: border-box;
+	@include transition(all);
+	border: 0;
+	border-radius: 6px;
+	text-align: center;
+	position: relative;
+	vertical-align: middle;
+	text-decoration: none;
+	font-family: $font_family_os;
+	//text-transform: uppercase;
+	z-index: 2;
+	margin-left: 0;
+	letter-spacing: 0.5px;
+	    
+	&:after {
+	    content: "";
+	    display: inline-block;
+	    width: 12px;
+	    height: 8px;
+	    margin-left: 15px;
+	    background: url(images/button_arr.png) no-repeat left top;
+	}
+	&:hover {
+	    opacity: 0.9;
+	}
+    }
+    
+    .uFormButton:last-child {
+	padding-left: 0;
+    }
+    .uFormButton:first-child {
+	padding-right: 0;
+    }
+    
+    .personalInfo {
+	margin-right: -35px;
+    }
+    
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+    .form_block {
+	input, textarea, select {
+	    max-width: 300px;
+	}
+    }
+}
+@media screen and (max-width: 1300px)  {
+    
+}
+@media screen and (max-width: 1000px) {
+    
+    
+    
+}
+
+
+@media screen and (max-width: 800px) {
+    .form_block {  
+	input, textarea, select {
+	    max-width: 320px;
+	    //height: 35px;
+	}
+    }
+}
+
+@media screen and (max-width: 590px) {
+    
+}
+
+@media screen and (max-width: 450px) {
+}
+
+
+
+/* end forms styles */
