@@ -25,20 +25,6 @@ $(document).ready(function() {
 		top = $(id).offset().top - 130;
 	    $('body,html').animate({scrollTop: top}, 500);
 	});
-	
-	// шапка и первый слайдер при прокрутке
-	$(window).on('load scroll', function() {
-	    var height = $(window).height() - 100;
-	    if($(this).scrollTop() > height) {
-		$('#header').addClass('scroll');
-	    } else {
-		$('#header').removeClass('scroll');
-	    }
-	    
-	    var height_main_slide = $('#main_slide').height();
-	    $('#catalog').css('margin-top', height_main_slide);
-	    
-	});
 
 	// класс меню с подменю
 	$('.main_menu > li').each(function(){
@@ -123,13 +109,27 @@ $(document).ready(function() {
 	
 	
 	$(window).on('load scroll', function(){
-		$('.main_section').each(function(){
-		    if ( $(this).offset().top < ($(document).scrollTop() + window.innerHeight*0.6 ) ) {
-			$(this).addClass('animated');
-		    }	
-		});
+	    $('.main_section').each(function(){
+		if ( $(this).offset().top < ($(document).scrollTop() + window.innerHeight*0.6 ) ) {
+		    $(this).addClass('animated');
+		}
+		
+	    });
 	});
 	
+	    
+	$(window).on('load scroll resize', function(){
+		var height = $(window).height() - 100;
+		if($(this).scrollTop() > height) {
+		    $('#header').addClass('scroll');
+		} else {
+		    $('#header').removeClass('scroll');
+		}
+		
+	var height_main_slide = $('#main_slide').height();
+	$('#catalog').css('margin-top', height_main_slide);
+	});
+	 
 	
 	
 	$('.tab_buttons .tab_but').on('click', function(){ 
@@ -141,254 +141,30 @@ $(document).ready(function() {
 	    
 	});
 	
-	$('.point .num').click(function(){
-		if ($(this).parent().hasClass("active")) {
-		    //$(this).parent().children('.info').slideUp(500);
-		    $(this).parent().removeClass('active');
-		}else{
-		    //$('.info').slideUp(500);
-		    $('.point').removeClass('active');
-		    //$(this).parent().children('.info').slideDown(500);
-		    $(this).parent().addClass('active');
-		}
-	});
-	
-	$('.services .serv_item').mouseover(function(){
-	    $('.serv_item').removeClass('active');
-	    $(this).addClass('active');
-	});
 	
 	
-	$('.more_text_link').html('Показать полностью');
-
-	$('.more_text_link').on('click', function(e){
-	  e.preventDefault();
-	  
-	  var
-	    $this = $(this),
-	    content = $(this).parents('.tab').find('.more_text_block');  
-	  
-	  
-	  if(!$this.hasClass('trigger')){
-	    $this.addClass('trigger');
-	    $this.html('Показать меньше');
-	    
-	    content.slideDown();
-	  } else {
-	    $this.removeClass('trigger');
-	    $this.html('Показать полностью');
-	    
-	    content.slideUp();
-	  }
-	});
-	
-	
-	$(window).on('load resize', function(){
-	    if ( window.innerWidth>1020 && $('.main_section .production_slider').hasClass('slick-initialized') ) {
-		$('.main_section .production_slider').slick('unslick');
-	    } else if ( window.innerWidth<=1020 && !$('.main_section .production_slider').hasClass('slick-initialized') ) {
-		$('.main_section .production_slider').slick({
-		    dots: false, //true,
-		    arrows: true,
-		    infinite: true,
-		    speed: 1200,
-		    slidesToShow: 3,
-		    slidesToScroll: 1,
-		    prevArrow: '<span class="slick-prev">&nbsp;</span>',
-		    nextArrow: '<span class="slick-next">&nbsp;</span>',
-		    responsive: [
-			
-		      {
-			breakpoint: 801,
-			settings: {
-			  slidesToShow: 2,
-			}
-		      },
-		      {
-			breakpoint: 500,
-			settings: {
-			  slidesToShow: 1,
-			}
-		      }
-		    ]
-		});
-	    };
-	    
-	    
-	    if ( window.innerWidth>1020 && $('.main_section .goals_slider').hasClass('slick-initialized') ) {
-		$('.main_section .goals_slider').slick('unslick');
-	    } else if ( window.innerWidth<=1020 && !$('.main_section .goals_slider').hasClass('slick-initialized') ) {
-		$('.main_section .goals_slider').slick({
-		    dots: false, //true,
-		    arrows: true,
-		    infinite: true,
-		    speed: 1200,
-		    slidesToShow: 2,
-		    slidesToScroll: 1,
-		    prevArrow: '<span class="slick-prev">&nbsp;</span>',
-		    nextArrow: '<span class="slick-next">&nbsp;</span>',
-		    responsive: [
-		      {
-			breakpoint: 601,
-			settings: {
-			  slidesToShow: 1,
-			}
-		      }
-		    ]
-		});
-	    };
-	    
-	    
-	    if ( window.innerWidth>1020 && $(' .services').hasClass('slick-initialized') ) {
-		$(' .services').slick('unslick');
-	    } else if ( window.innerWidth<=1020 && !$(' .services').hasClass('slick-initialized') ) {
-		$(' .services').slick({
-		    dots: false, //true,
-		    arrows: true,
-		    infinite: false,
-		    speed: 1200,
-		    slidesToShow: 3,
-		    slidesToScroll: 1,
-		    initialSlide: 1,
-		    prevArrow: '<span class="slick-prev">&nbsp;</span>',
-		    nextArrow: '<span class="slick-next">&nbsp;</span>',
-		    responsive: [
-		      {
-			breakpoint: 651,
-			settings: {
-			  slidesToShow: 2,
-			  initialSlide: 2,
-			}
-		      },
-		      {
-			breakpoint: 451,
-			settings: {
-			  slidesToShow: 1,
-			  initialSlide: 2,
-			}
-		      }
-		    ]
-		});
-	    };
-	});
-	
-	$('.adv_slider').slick({
-	    dots: true, 
-	    arrows:true, //false,
-	    infinite: false,
+	$('.main_section .use_slider').slick({
+	    dots: false, //true,
+	    arrows: true,
+	    infinite: true,
 	    speed: 1200,
 	    slidesToShow: 1,
 	    slidesToScroll: 1,
-	    initialSlide: 1,
-	    centerMode: true,
 	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
 	    nextArrow: '<span class="slick-next">&nbsp;</span>',
-	});
-	
-	var timer = false;
-	$('.adv_menu li').click(function(){
-	  if(!timer){
-	    timer = true;
-	    var el = $(this);
-	    if(!el.hasClass('active')){
-	      var nextTab = el.index();
-	      $('.adv_menu .active').removeClass('active');
-	      $('.adv_slider').slick('slickGoTo', nextTab);
-	      el.addClass('active');
-	    }
-	    setTimeout(function(){
-	      timer = false;
-	    }, 1000)
-	  }
-	  return false;
-	})
-	
-	      
-	$('.stocks_slider').slick({
-		dots: true,
-		arrows: true,
-		//infinite: true,
-		fade: true,
-		speed: 1300,
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		prevArrow: '<span class="slick-prev">&nbsp;</span>',
-		nextArrow: '<span class="slick-next">&nbsp;</span>',
-	});
-	
-	
-	$('.main_section .clients_wrap').slick({
-	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
-            nextArrow: '<span class="slick-next">&nbsp;</span>',
-	    //fade: true,
-	    speed: 1500,
-	    slidesToShow: 4,
-	    //variableWidth: true,
-	    responsive: [{
-		breakpoint: 1301,
-		settings: { 
-		    slidesToShow: 3,
-		}
-	    },
-	    {
+	    appendArrows: '#use .slick_slider_arrows',
+	    responsive: [
+	      {
 		breakpoint: 1001,
-		settings: { 
-		    slidesToShow: 2,
+		settings: {
+		  dots: true,
 		}
-	    },
-	    {
-		breakpoint: 801,
-		settings: { 
-		    slidesToShow: 1,
-		}
-	    },
-	    {
-		breakpoint: 600,
-		settings: { 
-		    slidesToShow: 2,
-		}
-	    },
-	    {
-		breakpoint: 451,
-		settings: { 
-		    slidesToShow: 1,
-		}
-	    }]
+	      }
+	    ]
 	});
 	
-	$('.article_slider').slick({
-		dots: false,
-		arrows: true,
-		infinite: true,
-		speed: 2000,
-		slidesToShow: 4,
-		slidesToScroll: 1,
-		//centerMode: true,
-		//variableWidth: true,
-		prevArrow: '<span class="slick-prev">&nbsp;</span>',
-		nextArrow: '<span class="slick-next">&nbsp;</span>',
-		responsive: [
-		  {
-		    breakpoint: 1301,
-		    settings: {
-		      slidesToShow: 3,
-		    }
-		  },
-		  
-		  {
-		    breakpoint: 1021,
-		    settings: {
-		      slidesToShow: 2,
-		    }
-		  },
-		  {
-		    breakpoint: 701,
-		    settings: {
-		      slidesToShow: 1,
-		    }
-		  },
-		]
-	});
+	
+	
 	/*$('.main_img.slider').slick({
 		dots: true,
 		arrows: false,
@@ -504,6 +280,10 @@ $(document).ready(function() {
 		  },
 		]
 	});
+	
+	
+	
+	
     
 });
 

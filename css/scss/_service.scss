@@ -59,3 +59,16 @@
 	
 	
 }
+#about{
+		.main_service_blocks:nth-child(1){
+		background-image: url(images/about_serv_img1.jpg);
+		background-size: 100%;
+		float: left;
+		background-repeat: no-repeat;
+	}
+	.main_service_blocks:nth-child(2){
+		background-image: url(images/about_serv_img2.jpg);
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+}

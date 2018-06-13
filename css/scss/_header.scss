@@ -111,8 +111,8 @@
 	    color: #fff;
 	    
 	    &:hover {
-		text-decoration: none;
-		opacity: 0.9;
+		//text-decoration: none;
+		//opacity: 0.9;
 	    }
 	}
     }
@@ -153,6 +153,9 @@
 		@include transition(all);
 		vertical-align: middle;
 		
+		&:hover {
+		    text-decoration: underline;
+		}
             }
 	    
 	    >li.submenu {

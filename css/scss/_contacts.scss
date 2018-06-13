@@ -2,7 +2,7 @@
 
 #contacts {
     overflow: visible;
-    background: #80aed6 url(images/contacts_bg.jpg) no-repeat center bottom; // cover;
+    background: #80aed6 url(images/contacts_bg.jpg) no-repeat center bottom / cover;
     .in {
 	//padding-top: 10px;
 	z-index: 5;
@@ -277,6 +277,9 @@ main + #contacts {
 	.text {
 	    margin-left: 460px;
 	}
+	.h1 {
+	    margin-bottom: 15px;
+	}
 	
 	.cont .h4 {
 	    font-size: 22px;
@@ -285,7 +288,10 @@ main + #contacts {
 	.form_block {
 	    max-width: 400px;
 	    //height: 600px;
-	    padding: 40px 0 20px; 
+	    padding: 40px 0 20px;
+	    p {
+		margin-bottom: 20px;
+	    } 
 	    
 	    input[type="checkbox"] + label + a {
 		margin-right: -30px;
@@ -295,9 +301,6 @@ main + #contacts {
 }
 @media screen and (max-width: 800px) {
     #contacts {
-	.h1 {
-	    margin-bottom: 10px;
-	}
 	.text {
 	    margin-left: 0px;
 	}
@@ -308,9 +311,6 @@ main + #contacts {
 	
 	.form_block {
 	    //display: none; 
-	    p {
-		margin-bottom: 15px;
-	    }
 	    input[type="checkbox"] + label, &.gUniForm input[type="checkbox"] + label{
 		top: -78px;
 	    }
