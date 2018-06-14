@@ -326,8 +326,9 @@ ul.slick-dots {
   width: 100%;
   left: 0;
   z-index: 5;
-  padding-top: 8px;
-  margin-bottom: 27px; }
+  padding-top: 50px;
+  margin-bottom: 27px;
+  border-bottom: 1px solid #94ccea; }
   .tab_buttons .tab_but {
     display: inline-block;
     margin-right: 0px;
@@ -336,7 +337,10 @@ ul.slick-dots {
     height: 46px;
     line-height: 36px;
     box-sizing: border-box;
-    color: #777777;
+    color: #878a90;
+    font-family: 'Oswald';
+    font-size: 24px;
+    margin-bottom: -2.6px;
     position: relative; }
     .tab_buttons .tab_but a {
       color: #777777;
@@ -344,15 +348,14 @@ ul.slick-dots {
       padding: 5px 20px;
       display: block; }
     .tab_buttons .tab_but.active {
-      background: #ff9600;
-      color: #fff; }
+      border-bottom: 5px solid #4a83bc;
+      color: #0d121f; }
       .tab_buttons .tab_but.active:after {
         content: '';
         position: absolute;
         right: -14px;
         top: 0;
         border-top: 23px solid transparent;
-        border-left: 15px solid #ff9600;
         border-bottom: 23px solid transparent; }
       .tab_buttons .tab_but.active a {
         color: #fff; }
@@ -410,6 +413,12 @@ ul.slick-dots {
     height: auto;
     width: 100%;
     object-fit: cover; }
+
+table, .near_table {
+  display: inline-block; }
+
+.near_table {
+  width: 50%; }
 
 /* start header styles */
 #index #header {
@@ -2382,8 +2391,59 @@ main {
 .app {
   padding-top: 57px; }
 
-.button {
-  margin-top: 65px; }
+.products_images {
+  float: left;
+  width: 50%;
+  position: relative;
+  padding-top: 130px;
+  padding-bottom: 90px; }
+  .products_images:before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 1000%;
+    height: 100%;
+    right: 0;
+    top: 0; }
+  .products_images .main_img {
+    height: 480px;
+    line-height: 480px;
+    background: no-repeat center / contain;
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+    float: right;
+    width: 71.15385%;
+    margin-right: 8.33333%; }
+    .products_images .main_img .slick-list {
+      margin: 0px;
+      position: relative;
+      width: 100%;
+      height: 100%; }
+  .products_images .small_images {
+    float: left;
+    width: 140px;
+    height: 345px;
+    position: relative;
+    top: 50%;
+    margin-top: 70px; }
+
+.products_info {
+  margin-left: calc(50% + 70px);
+  margin-bottom: 121px; }
+  .products_info b {
+    font-size: 24PX; }
+  .products_info .b2 b {
+    font-size: 16px;
+    margin-right: 92px;
+    display: inline-block; }
+    .products_info .b2 b span {
+      display: block; }
+      .products_info .b2 b span img {
+        margin-right: 16px; }
+
+.products_info_more {
+  background-color: #fafdff; }
 
 /* start contacts styles */
 #contacts {

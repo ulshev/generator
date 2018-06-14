@@ -388,9 +388,9 @@ ul.slick-dots {
     width: 100%;
     left: 0;
     z-index: 5;
-    padding-top: 8px;
+    padding-top: 50px;
     margin-bottom: 27px;
-    
+    border-bottom: 1px solid #94ccea;
     .tab_but {
 	//border-bottom: 2px dotted transparent;
 	//font-weight: 700;
@@ -401,7 +401,10 @@ ul.slick-dots {
         height: 46px;
         line-height: 36px;
         box-sizing: border-box;
-	color: #777777;
+	color: #878a90;
+		font-family: 'Oswald';
+		font-size: 24px;
+		margin-bottom: -2.6px;
 	//text-transform: uppercase;
         position: relative;
 	
@@ -415,8 +418,8 @@ ul.slick-dots {
         }
 	
         &.active {
-	    background: #ff9600;
-            color: #fff;
+	   		border-bottom: 5px solid #4a83bc;
+            color: #0d121f;
             
             &:after {
                 content: '';
@@ -424,7 +427,6 @@ ul.slick-dots {
                 right: -14px;
                 top: 0;
                 border-top: 23px solid transparent;
-                border-left: 15px solid #ff9600;
                 border-bottom: 23px solid transparent;
             }
             
@@ -491,4 +493,11 @@ ul.slick-dots {
         width: 100%;
         object-fit: cover;  
     }
+}
+table, .near_table{
+	display: inline-block;
+
+}
+.near_table{
+	width: 50%;
 }
