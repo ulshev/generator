@@ -1,7 +1,7 @@
 /* start content styles */
 .bread_crumbs {
     //text-align: center;
-	margin-top: 52px;
+	//margin-top: 52px;
     margin-bottom: 22px;
     padding-top: 30px;
     font-weight: 300;
@@ -78,26 +78,7 @@ main {
 }
 
 .content {
-    .h1_bg {
-	position: absolute;
-	color: #eef4f6;
-	text-transform: uppercase;
-	font-size: 100px;
-	line-height: 40%;
-	z-index: 0;
-	font-weight: 900;
-            
-    }
-                    height: 2787px;    
-    h1 {
-	position: relative;
-	z-index: 1;
-	margin-bottom: 39px;
-            margin-left: 69px;
-    font-family: 'Bebas Neue';
-    font-weight: bold; 
-       color: #111111;
-    }
+	padding-top: 100px;
         h2 , h5
         {
                 margin-left: 50px;
@@ -166,7 +147,7 @@ main {
     padding-bottom: 10px;
 }
 
-.content {
+.content .text {
     line-height: 170%;
     font-weight: 300;
     
@@ -645,9 +626,9 @@ main {
 	
     }
 
-.text .pagination, .text .pagination {
+.pagination {
     margin-bottom: 50px;
-    text-align: center;
+    //text-align: center;
     li {
 	display: inline-block;
 	vertical-align: middle;

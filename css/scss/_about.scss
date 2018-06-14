@@ -8,7 +8,7 @@
 		width: 50%;
 		height: 100%;
 		top: 0;
-		background: #edf2ef no-repeat center / cover;
+		background: #edf2ef no-repeat right center / cover;
 	}
 	
 	.in {
@@ -16,7 +16,7 @@
 		padding-bottom: 100px;
 	}
 	
-	.kohler_logo, .h3 {
+	.kohler_logo, .h3, .bread_crumbs, h1 {
 		margin-left: -160/730*100%;
 		margin-bottom:30px;
 	}
@@ -38,7 +38,13 @@
 	
 }
 
-
+#about{
+	.bread_crumbs, h1 {
+		margin-left: -160/730*100%;
+		margin-bottom:30px;
+	}
+	
+}
 @media screen and (max-width: 1600px) {
     #about{
 	.in {
@@ -54,7 +60,7 @@
 		padding-top: 60px;
 		padding-bottom: 60px;
 	}
-	.kohler_logo, .h3 {
+	.kohler_logo, .h3, .bread_crumbs, h1 {
 		margin-left: -100/730*100%;
 		margin-bottom:20px;
 	}
@@ -84,7 +90,7 @@
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
-	.kohler_logo, .h3 {
+	.kohler_logo, .h3, .bread_crumbs, h1 {
 		margin-left: 0;
 	}
 	.h3 {

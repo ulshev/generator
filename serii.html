@@ -20,8 +20,8 @@
 	<script type="text/javascript" src="js/script.js"></script> 
 	
 </head>
-<body><!-- id=index должен быть только на главной странице-->
-    <div class="wrapper">
+<body id="serii"><!-- id=index должен быть только на главной странице-->
+    <div class="wrapper" style="background:none">
 	<!-- шапка -->
 	<header id="header" style="background:linear-gradient(to right,#486da6, #52baef);">
 	    <div class="in">
@@ -31,13 +31,13 @@
 		    </a>
 		</div>
 		
-		<a href="#" class="button white">Заказать звонок<span class="arr">&rarr;</span></a>
+		<a href="#" class="button white">Заказать звонок<span class="arr">→</span></a>
 		<div class="header_cont">
 		    <a href="tel:+74950250052">+7 (495) 025-00-52</a>
 		</div>
 		<nav>
 		    <ul class="main_menu">
-			<li>
+			<li class="active">
 			    <a href="index.html" title="Главная страница">Главная</a>
 			</li>
 			<li>
@@ -55,7 +55,7 @@
 			<li>
 			    <a href="support.html" title="Поддержка">Поддержка</a>
 			</li>
-			<li class="active">
+			<li>
 			    <a href="about.html" title="О компании">О компании</a>
 			    <ul>
 				<li><a class="active" href="history.html">История</a></li>
@@ -74,62 +74,47 @@
 	    </div>
 	</header>
 	<!-- end шапка -->
-	
-	<div class="content">
-	    
-	    <!-- О компании -->
-	    <div id="about" class="main_section">
-		<div class="img" style="background-image: url(images/about_main_img.png);"></div>
-		
-		<div class="in">
-		    <div class="text">
-			<div class="bread_crumbs">
-			    <a href="#">Главная</a>
-			    <span class="active">О компании</span>
+	<div class="serii_main_container">
+		<div class="page_tittle" style="background: url(images/serii_main_img.jpg) 100% no-repeat;margin-bottom: -17px;">
+			<div class="in">
+				<div class="bread_crumbs">
+				<a href="index.html">Главная</a>
+				<span class="active">Серии оборудования</span>
+				</div>
+			<h2>Серии оборудования</h2>
 			</div>
-			<h1>О компании</h1>
-			<div class="h3">Группа компаний «ВЕПРЬ» более 20 лет является лидером на Российском рынке по проектированию, производству и сервисному обслуживанию.</div>
-			<p>Наши собственные производственные мощности, высококвалифицированные кадры и жесткий контроль испытаний, позволяют реализовывать самые сложные проекты по обеспечению производственных, ресурсодобывающих, жилых и других объектов резервными и основными источниками электроэнергии.</p>
-			<p>Наши собственные производственные мощности, высококвалифицированные кадры и жесткий контроль испытаний, позволяют реализовывать самые сложные проекты по обеспечению производственных, ресурсодобывающих, жилых и других объектов резервными и основными источниками электроэнергии.</p>
-			<a href="#" class="button">Подробнее<span class="arr">&rarr;</span></a>
-		    </div>
 		</div>
-	    </div>
-	    <!-- end компании -->
-	    
-	    <div class="main_section" id="advantages">
-		<div class="in">
-		    <ol class="advantages_block">
-			<li>Высококвалифицированный и опытный инженерный и технический персонал</li>
-			<li>Наличие собственных производственных и складских площадей</li>
-			<li>Собственная система управления электростанциями</li>
-			<li>Конструкторский отдел</li>
-			<li>Высококвалифицированный и опытный инженерный и технический персонал</li>
-			<li>Качество продукции подтверждено ОТК</li>
-		    </ol>
+			<div class="first_block">
+			<div class="in">
+				<div class="block_text left">
+				<h2>DIESEL AIR-COOLED KD350</h2>
+					<p>Компания “Perpetuum Mobile” зарекомендовала себя как надежный поставщик высококачественного оборудования. Мы являемся официальным представителем в России компании Kohler-Lombardini. </p>
+					<p>
+Компания “Perpetuum Mobile” располагает своим авторизованным сервис центром, осуществляющим гарантийное и послегарантийное обслуживание поставляемого оборудования. Основной принцип работы компании – поставка только того оборудования, сервисное обслуживание и ремонт которого могут грамотно выполнить специалисты нашего сервисного центра, а также обеспечение всеми необходимыми запасными частями и комплектующими. Тесно взаимодействуя с нашими зарубежными </p>
+			<h3>Konler diesel kdi</h3>
+			<ul>
+				<li><span>Высококвалифицированный и опытный 
+инженерный и технический персонал</span></li>
+					<li><span>Наличие собственных 
+производственных и складских площадей</span></li>
+				<li><span>Собственная система управления 
+электростанциями</span></li>
+				<li><span>Высококвалифицированный и опытный 
+инженерный и технический персонал</span></li>
+				<li><span>Конструкторский отдел</span></li>
+				<li><span>Качевство продукции подтверждено ОТК</span></li>
+			</ul>
+			<a href="#" class="button">Переход в каталог<span class="arr">→</span></a>
+				</div>
+				<img src="images/serii_img.jpg" alt="img">
+			</div>
 		</div>
-	    </div>
-	    
-	    
-	    
-	    <div id="services" class="main_section">
-		<div class="service" style="background-image: url(images/about_serv_img1.jpg);">
-		    <div class="blur_block">
-			<div class="h1">История</div>
-			<p>С 1998 года "Техстар" является авторизованным сервисным центром Группы компаний «Вепрь» и оказывает полный комплекс услуг по обслуживанию электрооборудования в диапазоне мощностей от 2кВт до 2,5МВт, со сдачей проектов любой сложности «под ключ».</p>
-			<a href="#" class="button">Подробнее<span class="arr">&rarr;</span></a>
-		    </div>
-		</div>
-		<div class="service" style="background-image: url(images/about_serv_img2.jpg);">
-		    <div class="blur_block">
-			<div class="h1">Дистрибьютор</div>
-			<p>С 1998 года "Техстар" является авторизованным сервисным центром Группы компаний «Вепрь» и оказывает полный комплекс услуг по обслуживанию электрооборудования в диапазоне мощностей от 2кВт до 2,5МВт, со сдачей проектов любой сложности «под ключ».</p>
-			<a href="#" class="button">Подробнее<span class="arr">&rarr;</span></a>
-		    </div>
-		</div>
-	    </div>
-	    
 	</div>
+
+
+
+
+
 
 	<!-- подвал -->
 	<div id="pre_foo"></div>

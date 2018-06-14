@@ -231,7 +231,7 @@
 @media screen and (max-width: 600px) {
     #main_slide {
 	min-height: 400px;
-	background-position: 20% center;
+	background-position: 44% center;
 	
 	.text {
 	    top: 80px;
@@ -269,7 +269,10 @@
 
 }
 @media screen and (max-width: 400px) {
-
+#main_slide {
+	min-height: 400px;
+	background-position: 44% center;
+    }
 }
 
 /* end main slider styles */
