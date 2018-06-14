@@ -143,6 +143,8 @@
 		padding: 0px 10px;
 		height: 66px;
 		overflow: hidden;
+		font-size: 16px;
+		line-height: 150%;
             }
             a {
 		display: inline-block;
@@ -152,9 +154,11 @@
 		color: #fff;
 		@include transition(all);
 		vertical-align: middle;
+		border-bottom: 1px solid transparent;
 		
 		&:hover {
-		    text-decoration: underline;
+		    //text-decoration: underline;
+		    border-bottom-color: #fff;
 		}
             }
 	    

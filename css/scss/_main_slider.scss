@@ -5,6 +5,7 @@
     z-index: 0;
     background: #0459d6 url(images/generator_bg.jpg) no-repeat center / cover;
     @include transition_slow(all);
+    //opacity: 0;
     
     height: 100%;
     position: fixed;

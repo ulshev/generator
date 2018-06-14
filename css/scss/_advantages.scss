@@ -1,0 +1,195 @@
+/* start advantages styles */
+
+#advantages {
+    z-index: 1;
+    overflow: hidden;
+    background: #fff; //url(images/advantages.jpg) no-repeat center top; // cover;
+    
+    .in {
+	padding: 27px 20px 1px;
+    }
+    
+}    
+    .advantages_block {
+	//margin-left: 809/1560*100%;
+	padding-top: 41px;
+	counter-reset: li;
+	text-align: justify;
+	margin-bottom: -35px;
+	
+	&:after {
+	    content: "";
+	    display: inline-block;
+	    width: 100%;
+	}
+	
+	li {
+	    text-align: left;
+	    vertical-align: top;
+	    width: 30%;
+	    max-width: 410px;
+	    display: inline-block;	
+	    font-size: 18px;
+	    line-height: 145%;
+	    font-weight: 500;	
+	    position: relative;
+	    padding-left: 25px;
+	    box-sizing: border-box;
+	    letter-spacing: 0.5px;
+	    margin-bottom: 60px;
+	    
+	    &:nth-child(2n) {
+		//margin-right: 0;
+	    }
+	    
+	    &:before {
+		//position: absolute;
+		z-index: 0;
+		counter-increment: li;
+		content: counter(li);
+		//left: 0px;
+		//top: -0px;
+		//width: 100px;
+		//height: 100px;
+		display: block;
+		color:  #6493b8;	
+		font-size: 62px;
+		line-height: 100%;
+		font-weight: bold;
+		margin-bottom: 7px;
+		margin-left: -25px;
+		background: url(images/dots_bg.png) repeat left top;
+		/* 1 - 9 */content: "0" counter(li); /* becomes 01 - 09 */
+	    }
+	    &:after{
+		content: '';
+		position: absolute;
+		//background-color: #6291b8;
+		width: 0px;
+		height: 2px;
+		left: 90px;
+		top: 32px;
+		border-left: 160px solid #9cd0f4;
+		border-right: 160px solid #6291b8;
+	    }
+	}
+    }
+    
+
+@media screen and (max-width: 1600px) {
+    .advantages_block {
+	
+	li {
+	    
+	    &:after{
+		border-left-width: 140px;
+		border-right-width: 140px;
+	    }
+	}
+    }
+}
+@media screen and (max-width: 1450px){
+    .advantages_block {
+	
+	li {
+	    &:before{	
+		font-size: 52px;
+		line-height: 80%;
+	    }
+	    &:after{
+		top: 20px;
+	    }
+	}
+    }
+}
+@media screen and (max-width: 1300px){
+    .advantages_block {
+	
+	li {
+	    &:before{	
+		font-size: 47px;
+		line-height: 80%;
+	    }
+	    &:after{
+		border-left-width: 100px;
+		border-right-width: 100px;
+	    }
+	}
+    }
+}
+@media screen and (max-width: 1000px) {
+    .advantages_block {
+	
+	li {
+	    font-size: 16px;
+	    line-height: 150%;
+	    &:after{
+		border-left-width: 70px;
+		border-right-width: 70px;
+	    }
+	}
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .advantages_block {
+	
+	li {
+	    width: 45%;
+	    margin-bottom: 30px;
+	}
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #advantages {
+	.in {
+	    padding: 0px 20px 1px;
+	}
+	
+    } 
+    .advantages_block {
+	margin-bottom: -30px;
+	li {
+	    font-size: 14px;
+	    line-height: 150%;
+	    padding-left: 0;
+	    &:before{	
+		font-size: 42px;
+		line-height: 80%;
+		margin-left: 0;
+	    }
+	    
+	    &:after{
+		border-left-width: 50px;
+		border-right-width: 50px;
+		left: 60px;
+	    }
+	}
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .advantages_block {
+	
+	li {
+	    width: 100%;
+	    margin-bottom: 30px;
+	    padding-left: 60px;
+	    &:before{	
+		font-size: 37px;
+		line-height: 80%;
+		float: left;
+		width: 50px;
+		position: relative;
+		margin-left: -60px;
+	    }
+	    &:after{
+		display: none;
+	    }
+	}
+    }
+}
+
+/* end advantages styles */
