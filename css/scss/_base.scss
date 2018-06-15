@@ -59,7 +59,7 @@ body {
 //background: url(images/site.jpg) center top no-repeat;
 //background-size: auto;
 }
-#index .wrapper {
+#index .wrapper, #product .wrapper {
     display: block;
     height: auto;
 }
@@ -497,7 +497,7 @@ ul.slick-dots {
         object-fit: cover;  
     }
 }
-table, .near_table{
+.near_table{
 	display: inline-block;
 
 }

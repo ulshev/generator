@@ -227,7 +227,7 @@ $(document).ready(function() {
 	    asNavFor: '.products_images .small_images'
 	  });
 	$('.products_images .small_images').slick({
-	    slidesToShow: 3,
+	    slidesToShow: 4,
 	    slidesToScroll: 1,
 	    arrows: false,
 	    asNavFor: '.products_images .main_img',
