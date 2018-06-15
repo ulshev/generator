@@ -235,6 +235,8 @@ $(document).ready(function() {
 	    //centerMode: true,
 	    vertical: true,
 	    focusOnSelect: true,
+	    prevArrow: '<span class="slick-prev">&nbsp;</span>',
+	    nextArrow: '<span class="slick-next">&nbsp;</span>',
 	    responsive: [
 		  {
 		    breakpoint: 1021,

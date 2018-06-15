@@ -3218,7 +3218,6 @@ main {
   margin-bottom: 0px;
   cursor: pointer;
   border-right: 3px solid transparent;
-  opacity: 0.5;
   overflow: hidden;
   -webkit-transition: opacity 0.8s ease 0s;
   -moz-transition: opacity 0.8s ease 0s;
@@ -3226,11 +3225,7 @@ main {
   transition: opacity 0.8s ease 0s;
   text-align: center;
 }
-.products_images .img_small:hover {
-  opacity: 1;
-}
 .products_images .img_small.slick-current {
-  opacity: 1;
   border: 1px solid #eee;
 }
 .products_images .img_small img {
@@ -3263,23 +3258,22 @@ main {
 .products_info_more {
   clear: both;
   margin-bottom: 50px;
-  background-color: #fafdff;
 }
 .products_info_more .tab_buttons {
-  background: #000c1e;
+  border-bottom: 1px solid #1992d1;
   padding: 0;
 }
 .products_info_more .tab_buttons .tab_but {
   padding-top: 8px;
+  padding-left: 0;
+  padding-right: 0;
   height: 57px;
   box-sizing: border-box;
   font-size: 20px;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
-  letter-spacing: 1px;
   font-weight: 400;
-  text-transform: uppercase;
-  border-top: 3px solid transparent;
-  color: #fff;
+  margin-right: 10%;
+  color: #5c5c5c;
 }
 .products_info_more .tab_buttons .tab_but:after {
   display: none;
@@ -3287,7 +3281,7 @@ main {
 .products_info_more .tab_buttons .tab_but.active {
   background: #fff;
   border-color: #1992d1;
-  color: #5c5c5c;
+  color: #000;
 }
 .products_info_more .tab_buttons .tab_but {
   padding-bottom: 20px;

@@ -78,17 +78,17 @@
 	    margin-bottom: 0px;
 	    cursor: pointer;
 	    border-right: 3px solid transparent;
-	    opacity: 0.5;
+	    //opacity: 0.5;
 	    overflow: hidden;
 	    @include transition_slow(opacity);
 	    text-align:  center;
 	    
 	    &:hover {
-		opacity: 1;
+		//opacity: 1;
 	    }
 	    
 	    &.slick-current {
-		opacity: 1;
+		//opacity: 1;
 		border: 1px solid #eee;
 	    }
 	    
@@ -128,23 +128,23 @@
 .products_info_more {
     clear: both;
     margin-bottom: 50px;
-    background-color: #fafdff;
     
     .tab_buttons {
-	background: #000c1e;
 	//min-height: 60px;
+    border-bottom: 1px solid $color_a;
 	padding: 0;
 	.tab_but {
 	    padding-top: 8px;
+	    padding-left: 0;
+	    padding-right: 0;
 	    height: 57px;
 	    box-sizing: border-box;
 	    font-size: 20px;
 	    font-family: $font_family_h;
-	    letter-spacing: 1px;
+	    //letter-spacing: 1px;
 	    font-weight: 400;
-	    text-transform: uppercase;
-	    border-top: 3px solid transparent;
-	    color: #fff;
+		margin-right: 10%;
+		color: $color_text;
 	    
 	    &:after {
 		display: none;
@@ -153,7 +153,7 @@
 	    &.active {
 		background: #fff;
 		border-color: $color_a;
-		color: $color_text;
+		color: #000;;
 	    }
 	}
 	
