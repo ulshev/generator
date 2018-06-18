@@ -57,7 +57,7 @@ $(document).ready(function() {
 	$('.menu_button').on('click', function(){
 		$('.main_menu_wrap').addClass('show');
 		$('.menu_close').addClass('show');
-		$('.main_menu').css('left', '50%');
+		//$('.main_menu').css('left', '50%');
 	});
 
 	// скрываем меню, удаляем классы активности, возвращаем меню на исходную
@@ -213,6 +213,29 @@ $(document).ready(function() {
 		  },
 		]
 	    
+	});
+	  
+	//$('.more_text_link').html('Показать полностью');
+
+	$('.filter_block_title').on('click', function(e){
+	  e.preventDefault();
+	  
+	  var
+	    $this = $(this),
+	    content = $(this).parents('.filter_block').find('.filter_block_content');  
+	  
+	  
+	  if(!$this.hasClass('show')){
+	    $this.addClass('show');
+	    //$this.html('Показать меньше');
+	    
+	    content.slideDown();
+	  } else {
+	    $this.removeClass('show');
+	    //$this.html('Показать полностью');
+	    
+	    content.slideUp();
+	  }
 	});
 	  
 	  

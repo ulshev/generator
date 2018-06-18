@@ -20,10 +20,10 @@
 	<script type="text/javascript" src="js/script.js"></script> 
 	
 </head>
-<body id="contacts"><!-- id=index должен быть только на главной странице-->
-    <div class="wrapper" style="background:none">
+<body id="contacts_page"><!-- id=index должен быть только на главной странице-->
+    <div class="wrapper">
 	<!-- шапка -->
-	<header id="header" style="background:linear-gradient(to right,#486da6, #52baef);">
+	<header id="header">
 	    <div class="in">
 		<div id="logo">
 		    <a href="index.html">
@@ -37,7 +37,7 @@
 		</div>
 		<nav>
 		    <ul class="main_menu">
-			<li class="active">
+			<li>
 			    <a href="index.html" title="Главная страница">Главная</a>
 			</li>
 			<li>
@@ -65,7 +65,7 @@
 			<li>
 			    <a href="applying.html" title="Применение">Применение</a>
 			</li>
-			<li>
+			<li class="active">
 			    <a href="contacts.html" title="Контакты">Контакты</a>
 			</li>
 		    </ul>
@@ -76,7 +76,380 @@
 	<!-- end шапка -->
 	
 
-
+	<div class="content">
+	    <div class="in">
+		<div class="bread_crumbs">
+		    <a href="#">Главная</a>
+		    <span class="active">Контакты</span>
+		</div>
+		
+		<h1>Контакты</h1>
+		<div class="text">
+		    <div class="cont_block">
+			<div class="h5">Сервисный центр "ТЕХСТАР"</div>
+			<div class="cont address">
+			    <p>127299, г. Москва, ул.&nbsp;Б.&nbsp;Академическая, 7</p>
+			</div>
+			<div class="cont tel">
+			    <a href="tel:+74950250050">+7 (495) 025 00 50</a>
+			</div>
+			<div class="cont email">
+			    <a href="mailto:service@generator.ru">service@generator.ru</a>
+			</div>
+		    </div>
+		    <div class="cont_block">
+			<div class="h5">Центральный офис:</div>
+			<div class="cont address">
+			    <p>127299, г. Москва, ул.&nbsp;Б.&nbsp;Академическая, 7</p>
+			</div>
+			<div class="cont tel">
+			    <a href="tel:+74950250052">+7 (495) 025-00-52</a>
+			</div>
+			<div class="cont email">
+			    <a href="mailto:info@generator.ru">info@generator.ru</a>
+			</div>
+		    </div>
+		</div>
+		
+		<div class="form_block">
+		    <h4>Напишите нам</h4>
+		    <p>Мы обязательно свяжемся с вами в рабочее время. </p>
+		    <form  action="">
+			<input value="" class="name" placeholder="Ф.И.О." type="text">
+			<input value="" class="tel" placeholder="+7 (___) ___ __ __" type="text">
+			<input value="" class="email" placeholder="Эл. почта" type="text">
+			<textarea placeholder="Сообщение"></textarea>
+			<p>Нажимая на кнопку я даю свое согласие на <a href="#">персональных&nbsp;данных</a></p>
+			<div class="button_block"><button type="submit">Отправить</button></div> 
+		    </form>
+		</div>
+	    </div>
+	    
+	    <div id="map">
+		
+	    </div>
+	    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW5waRqX6v-9byeN0ppkdgxdLG-8MotM4&callback=initMap"></script>
+	    <script>
+	    function initMap() {
+		var uluru = {lat: 55.82006387341422, lng: 37.52416805000007};
+		var map = new google.maps.Map(document.getElementById('map'), {
+		  zoom: 14,
+		  center: uluru,
+		  styles: [
+  {
+    "featureType": "administrative",
+    "stylers": [
+      {
+        "saturation": -100
+      }
+    ]
+  },
+  {
+    "featureType": "landscape",
+    "stylers": [
+      {
+        "color": "#dfdfdf"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#d1d1d1"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "saturation": -100
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#737373"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "saturation": -100
+      }
+    ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#696969"
+      },
+      {
+        "weight": 4
+      }
+    ]
+  },
+  {
+    "featureType": "poi.attraction",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      },
+      {
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#696969"
+      },
+      {
+        "weight": 3
+      }
+    ]
+  },
+  {
+    "featureType": "poi.business",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#cacaca"
+      },
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.medical",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "saturation": -100
+      }
+    ]
+  },
+  {
+    "featureType": "poi.medical",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#696969"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.medical",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c4c4c4"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#747474"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#696969"
+      },
+      {
+        "weight": 0.5
+      }
+    ]
+  },
+  {
+    "featureType": "poi.place_of_worship",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "saturation": -100
+      }
+    ]
+  },
+  {
+    "featureType": "poi.place_of_worship",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#696969"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.place_of_worship",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.school",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "saturation": -100
+      }
+    ]
+  },
+  {
+    "featureType": "poi.school",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#737373"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.school",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.sports_complex",
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "saturation": -100
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#d7d7d7"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#848484"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#d5d5d5"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station.bus",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station.rail",
+    "elementType": "labels.text",
+    "stylers": [
+      {
+        "color": "#696969"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station.rail",
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#bbd9e7"
+      }
+    ]
+  }
+]
+		});
+		var marker = new google.maps.Marker({
+		  position: uluru,
+		  map: map,
+		  icon: {
+		    url:'images/icon_map.png',
+		    anchor: new google.maps.Point(22, 24)
+		  },
+		});
+		
+	    }
+	</script>
+	</div>
 
 
 

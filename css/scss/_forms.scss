@@ -10,10 +10,10 @@
     form {
 	a {
 	    color: #fff;
-	    text-decoration: none;
+	    text-decoration: underline;
 	    
 	    &:hover {
-		text-decoration: underline;
+		text-decoration: none;
 	    }
 	}
     }
@@ -45,7 +45,7 @@
 	
 	
 	&:hover, &:focus, &:active {
-	    background-color: transparent;
+	    //background-color: transparent;
 	}
 	
 	&.name {
@@ -70,10 +70,10 @@
     
     
     textarea, input.textarea {
-	min-width: 100%;
+	//min-width: 100%;
 	max-width: 100%;
 	min-height: 100px;
-	max-height: 100px;
+	//max-height: 100px;
 	resize: none;
 	margin-bottom: 15px;
     }
@@ -156,19 +156,68 @@
 	font-size: 12px;
 	font-weight: 400;
     }
+    
+    input[type="radio"]:not(checked) + label, &.gUniForm input[type="radio"]:not(checked) + label {
+	display: inline-block;
+	position: relative;
+	//vertical-align: middle;
+	border: 1px solid transparent;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 145%;
+	letter-spacing: 0px;
+	//margin-top: 10px;
+	cursor: pointer;
+	padding-left: 25px;
+	//color: #999999;
+	margin-right: 35px;
+	
+	
+	&:before {
+	    content: '';
+	    width: 18px;
+	    height: 18px;
+	    background: rgba(255, 255, 255, 1) no-repeat center;
+	    position: absolute;
+	    left: 0;
+	    border: 1px solid $color_a;
+	    border-radius: 9px;
+	}
+	&:after {
+	    content: '';
+	    width: 10px;
+	    height: 10px;
+	    //background: url(images/checkbox.png) no-repeat center;
+	    position: absolute;
+	    border-radius: 5px;
+	    left: 5px;
+	    top: 5px;
+	    background: linear-gradient(to bottom, #51b7ec, #4973ac);
+	    opacity: 0;
+	}
+	
+	&:hover:before {
+	    opacity: 0.8;
+	}
+    }
+    input[type="radio"]:checked + label, &.gUniForm input[type="radio"]:checked + label {
+	&:after {
+	    opacity: 1;
+	}
+    }
     .button_block, .uFormButton, .gUniFormButtonContainter {
 	display: inline-block;
     }
     button[type="submit"], .uFormSubmit, .gUniFormSuccessButton {
 	margin-right: 0;
         margin-bottom: 14px;
-	padding: 0 25px 0 25px;
-        width: 205px;
+	padding: 0 20px 0 20px;
+        //width: 205px;
 	height: 45px;
 	line-height: 45px;
 	font-size: 14px;
 	font-weight: 400;
-	background: $color_a;
+	background: transparent;
 	color: #fff;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -184,6 +233,7 @@
 	z-index: 2;
 	margin-left: 0;
 	letter-spacing: 0.5px;
+	border: 1px solid #fff;
 	    
 	&:after {
 	    content: "";
@@ -194,7 +244,7 @@
 	    background: url(images/button_arr.png) no-repeat left top;
 	}
 	&:hover {
-	    opacity: 0.9;
+	    background: $color_a;
 	}
     }
     
