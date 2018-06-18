@@ -128,11 +128,24 @@
 .products_info_more {
     clear: both;
     margin-bottom: 50px;
+    position: relative;
+    
+    &:after  {
+	content: '';
+	background-color: #fafdff;
+	position: absolute;
+	left: -125%;
+	top: -10%;
+	width: 300%;
+	height: 120%;
+	z-index: -1;
+    }
     
     .tab_buttons {
 	//min-height: 60px;
     border-bottom: 1px solid $color_a;
 	padding: 0;
+	
 	.tab_but {
 	    padding-top: 8px;
 	    padding-left: 0;
@@ -145,13 +158,14 @@
 	    font-weight: 400;
 		margin-right: 10%;
 		color: $color_text;
+		background: transparent;
 	    
 	    &:after {
 		display: none;
 	    }
 	    
 	    &.active {
-		background: #fff;
+		//background: #fff;
 		border-color: $color_a;
 		color: #000;
 	    }
@@ -166,6 +180,10 @@
 	position: relative;
 	padding: 0;
 	counter-reset: equ_num;
+	
+	&:after {
+		@include clear();
+	}
 	
 	>.open {
 	-webkit-column-count: 2; 

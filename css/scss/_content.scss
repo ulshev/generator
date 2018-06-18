@@ -91,6 +91,9 @@ main {
 			text-decoration: none;
 		}
 	}
+	a.button {
+		text-decoration: none;
+	}
 
 }    
     .datetime {
@@ -269,7 +272,16 @@ main {
 }
     
 
-
+.top{
+	padding-top: 90px;
+	padding-bottom: 90px;
+	margin-bottom: 50px;
+	background: #c5c5c5 url(images/history_main_img.jpg) no-repeat center bottom / cover;
+		
+	.bread_crumbs {
+		margin-bottom: 12px;
+	}
+}
 
 
 
@@ -280,7 +292,7 @@ main {
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 300;
 	color: #777777;
 	//width: 21px;
@@ -293,96 +305,72 @@ main {
 	
 	a {
 	    display: block;
-	    width: 21px;
-	    height: 21px;
-	    line-height: 23px;
+	    width: 29px;
+	    height: 29px;
+	    line-height: 29px;
 	    vertical-align: middle;
-	    color: #777777;
+	    color: #a2b8d6;
 	    //border-radius: 11px;
 	    //overflow: hidden;
 	    text-decoration: none;
 	    //border: 1px solid transparent;
-	    
+	    background: url(images/pagination_border.png) no-repeat center top;
 	    
 	    &:hover {
 		color: $color_a;
 		//border: 1px solid $color_a;
 	    } 
-	}
-	    
-	&.active {
-	    width: 42px;
-	    height: 42px;
-	    box-shadow: 0 6px 21px rgba(255, 84, 0, 045);
-	    margin: 0 10px;
-	    border-radius: 23px;
-	    color: #fff;
-	    position: relative;
-	    
-	    &:before {
-		content: "";
-		position: absolute;
-		top: -2px;
-		left: -6px;
-		width: 54px;
-		height: 46px;
-		z-index: 0;
-		display: block;
-		margin-left: 0;
-		background: url(images/pagination_bg_active.png) no-repeat center;
-	    }
-	    
-	    a {
-		position: relative;
-		z-index: 1;
+		
+	    &.active {
+		background-position: center bottom;
 		color: #fff;
-		width: 100%;
-		height: 100%;
-		line-height: 42px;
-		text-align: center;
 	    }
 	}
 	
 	&.pag-ar {
-	    width: 54px;
-	    height: 46px;
-	    background: url(images/pagination_bg.png) no-repeat center;
-	    margin: 0 10px;
+	    //margin: 0 10px;
 	    
 	    a {
-		display: block;
-		width: 100%;
-		height: 100%;
 		text-indent: -10000px;
 		position: relative;
+		background: none;
 		
 		&:before {
 		    content: "";
 		    position: absolute;
 		    top: 50%;
 		    left: 50%;
-		    margin-top: -7px;
-		    margin-left: -9px;
-		    width: 17px;
-		    height: 13px;
+		    margin-top: -5px;
+		    margin-left: -5px;
+		    width: 12px;
+		    height: 9px;
 		    vertical-align: -1px;
-		    background: url(images/arr_middle.png) left -18px no-repeat;
+		    background: url(images/button_arr.png) left -60px no-repeat;
 		    z-index: 2;
+			@include transition(all);
 		}
+		
 	    }
 	}
 	
 	&.prev {
 	    a {
 		&:before {
-		    background-position: -28px -41px;
+		    background-position: left -60px;
+		}
+		
+		&:hover:before {
+			margin-left: -8px;
 		}
 	    }
 	}
 	&.next {
 	    a {
 		&:before {
-		    background-position: 0px -41px;
+		    background-position: right -60px;
+		}
+		&:hover:before {
+			margin-left: -2px;
 		}
 	    }
 	}
@@ -392,7 +380,7 @@ main {
 
 
 .block404 {
-    background: #000b1d url(images/page404_bg.jpg) no-repeat center 91px / cover;
+    background: #fff url(images/page404_bg.jpg) no-repeat center bottom / cover;
     display: table-row;
     height: 100%;
     //background-position: 0 30px;
@@ -404,39 +392,41 @@ main {
 	vertical-align: middle;
 	padding-top: 200px;
 	padding-bottom: 50px;
-	color: #fff;
+	color: #000;
     }
     
     .text {
 	max-width: $max-width;
 	margin: 0 auto;
 	text-align: center;
-	padding-right: 0;
+	padding-right: 40%;
     
 	.button {
 	    a {
-		color: #fff;
+		color: #1f2b5e;
+		text-decoration: none;
+		
+		&:hover {
+			color: #fff;
+		}
 	    }
 	}
     }
     
     .img404 {
-	font-size: 300px;
+	font-size: 240px;
 	line-height: 90%;
 	font-weight: 900;
-	//color: #fff;
+	color: #5577ad;
 	margin-bottom: 20px;
-	
-	img {
-	    max-width: 80%;
-	}
+	font-family: $font_family_h;
     }
     
     p {
-	font-size: 35px;
+	font-size: 36px;
 	font-weight: 400;
 	line-height: 100%;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	margin-bottom: 25px;
 	text-transform: uppercase;
 	font-family: $font_family_h;
@@ -499,53 +489,27 @@ main {
 
 
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1450px) {
+    .content {
+	padding-top: 85px;
+	padding-bottom: 40px;
+    }
     
+    .top{
+	padding-top: 80px;
+	padding-bottom: 80px;
+	margin-bottom: 50px;
+    }
 }
 
 @media screen and (max-width: 1300px) /*and (min-width: 1000px)*/ {
-    .galery {
-	width: 465px;
-	
-	.main_img {
-	    margin-bottom: 10px;
-	    float: none;
-	}
-	.small_images {
-	    float: none;
-	    width: 465px;
-	    
-	    .slick-list {
-		margin: 0px -5px;
-	    }
-	}
-	
-	.img_small {
-	    height: 178px;
-	    margin: 0 5px;
-	}
+    .top{
+	padding-top: 70px;
+	padding-bottom: 70px;
+	margin-bottom: 40px;
     }
 }
-@media screen and (max-width: 1020px) {
-    main {
-	margin-top: 80px;
-	padding-bottom: 30px;
-    }
-    .galery {
-	width: 350px;
-	
-	.main_img {
-	    height: 250px;
-	    width: 350px;
-	}
-	.small_images {
-	    width: 350px;
-	}
-	
-	.img_small {
-	    height: 170px;
-	}
-    }
+@media screen and (max-width: 1000px) {
     .block404 {
 	background-position: center 63px;
 	
@@ -554,6 +518,11 @@ main {
 	    padding-bottom: 10px;
 	}
 	
+    }
+    .top{
+	padding-top: 60px;
+	padding-bottom: 60px;
+	margin-bottom: 30px;
     }
 }
 
@@ -581,27 +550,28 @@ main {
 	
 	
     }
+    .content {
+	padding-top: 75px;
+	padding-bottom: 30px;
+    } 
+    .content .text {
+	.col2 {
+	    column-gap: 40px;
+	}
+	
+	.col3 {
+	    column-gap: 20px;
+	}
+    }
+    .top{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	margin-bottom: 30px;
+    }
     
 }
 
-@media screen and (max-width: 700px) {
-    .galery {
-	float: none;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 60px;
-    }
-    
-    .text table {
-	    overflow: auto;
-	
-	td, th {
-	    padding: 7px 15px 7px;
-	    
-	}
-    }
-    
-}
+
 
 @media screen and (max-width: 600px) {
     .left, .right {
@@ -639,24 +609,14 @@ main {
 	    font-size: 27px;
 	}
     }
+    .top{
+	padding-top: 40px;
+	padding-bottom: 40px;
+	margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 450px) {
-    main {
-	margin-top: 60px;
-	padding-bottom: 30px;
-    }
-    .galery {
-	width: 280px;
-	
-	.main_img {
-	    height: 200px;
-	    width: 280px;
-	}
-	.small_images {
-	    width: 280px;
-	}
-    }
     
     .block404 {
 	background-position: center 28px;
@@ -675,6 +635,24 @@ main {
 	p {
 	    font-size: 24px;
 	}
+    }
+    .content {
+	padding-top: 65px;
+	padding-bottom: 20px;
+    } 
+    .content .text {
+	.col2 {
+	    column-count: 1;
+	}
+	
+	.col3 {
+	    column-count: 2;
+	}
+    }
+    .top{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-bottom: 20px;
     }
 }
 

@@ -1,41 +1,4 @@
 
-	.top{
-		padding-top: 90px;
-		padding-bottom: 90px;
-		margin-bottom: 50px;
-		background: #c5c5c5 url(images/history_main_img.jpg) no-repeat 0px 50% / cover;
-		
-		.bread_crumbs {
-			margin-bottom: 12px;
-		}
-	}
-	
-	.content2{
-		//width: 49%;
-		//margin-right: 29px;
-		ul{
-			li{display: inline-block;
-			   width: 49%;
-			   vertical-align: top;
-				span{
-					display: flex;
-				
-				&:before{
-					content: '';
-					display: inline-block;
-					height:17px ;
-					width:16px; ;
-					background: linear-gradient(to bottom, #51b7ec, #4973ac);
-					border-radius: 5px;
-					margin-right: 15px;
-					margin-top: 6px;
-				}
-				}
-			}
-			
-		}
-	}
-
 .app{
 	padding-top: 57px;
 }
