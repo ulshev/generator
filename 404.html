@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<link rel="stylesheet" type="text/css"  media="all" href="css/jquery.fancybox.css">
 	<link rel="stylesheet" type="text/css"  media="all" href="css/font.css">
+	<link rel="stylesheet" type="text/css"  media="all" href="css/ModalWindow.css" /><!-- !!! стили не подключать -->
 	
 	<link rel="stylesheet" type="text/css"  media="all" href="template_styles.css">
 	
@@ -184,6 +185,90 @@
 	    </div>
 	</footer>
 	<!-- end подвал -->
+	
+	
+	
+	
+	<div class="gUniFormModalWindow form_block" id="gUniModal_ba8a78b059574665fed1d869434bd36e" style="display: none;">
+		    <div class="gUniFormHideScrollBar">
+		      <div class="gUniFormCn100">
+			<div class="gUniFormModalWindowContainer">
+			  <div class="gUniFormContainer">
+			    <div class="uFormHeading">Напишите нам</div>
+			    <p>Мы обязательно свяжемся с вами в рабочее время. </p>
+                            <form id="ba8a78b059574665fed1d869434bd36e" enctype="multipart/form-data" action="/test.php?clear_cache=Y" method="post" class="gUniForm" data-id="10" data-unique="ba8a78b059574665fed1d869434bd36e">
+                              <div class="uFormLine">
+				<div class="uError uErrorField8"></div>
+                                <div class="uField">
+				    <input type="text" placeholder="Ф.И.О." name="FORM_FIELD_8">
+				</div>
+                              </div>
+                              <div class="uFormLine">
+				<div class="uError uErrorField9"></div>
+                                <div class="uField">
+				    <input type="text" placeholder="+7 (___) ___ __ __" name="FORM_FIELD_9" data-required="Y">
+				    <script type="text/javascript">$(function(){
+						$('input[name="FORM_FIELD_9"]').mask("+7 (999) 999-99-99", {clearIfNotMatch: false});
+					    });
+				    </script>
+                                </div>
+                              </div>
+			       <div class="uFormLine">
+				<div class="uError uErrorField8"></div>
+                                <div class="uField">
+				    <input type="text" placeholder="Эл. почта" name="FORM_FIELD_8">
+				</div>
+                              </div>
+			       
+			       <div class="uFormLine">
+				<div class="uError uErrorField8"></div>
+                                <div class="uField">
+				    <textarea placeholder="Сообщение"></textarea>
+				</div>
+                              </div>
+                            <div class="personalInfo">
+				<div class="webFormItem">
+				  <div class="webFormItemError"></div>
+				  <div class="webFormItemField">
+				    <!--input type="checkbox" id="personalInfoFieldStatic_ba8a78b059574665fed1d869434bd36e" name="personalInfo" data-required="Y" value="Y"><label for="personalInfoFieldStatic_ba8a78b059574665fed1d869434bd36e">я согласен на обработку <a href='/personal-info/' target='_blank'>персональных данных</a></label-->
+				    <p>Нажимая на кнопку я даю свое согласие на <a href="#">персональных&nbsp;данных</a></p>
+				  </div>
+				</div>
+			    </div>
+                            <div class="uFormGlobalErrors"></div>
+			    <div class="uformTools">
+			      <div class="uFormButton">
+				<a href="#" class="uFormSubmit"><!--img src="/local/components/dweb/uni.form/templates/modal-window/images/submitIcon.png" class="uToolsIcon" alt="Отправить"-->Отправить</a>
+			      </div>
+			      <!--div class="uFormButton">
+				<a href="#" class="uFormReset"><img src="/local/components/dweb/uni.form/templates/modal-window/images/resetIcon.png" class="uToolsIcon" alt="Сбросить">Сбросить</a>
+			      </div-->
+			    </div>
+			    <!--div class="eFormRequired">* - обязательные поля</div-->
+			    <!--hidden button for enter submit-->
+			    <input type="submit" class="eFormHidden" value="" />
+			  </form>
+			</div>
+			<a href="#" class="gUniFormModalWindowExit"></a>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	
+		<div class="gUniFormSuccess" id="success_>" style="display: none;">
+		    <div class="gUniFormSuccessContainer">
+		      <div class="gUniFormSuccessBg">
+			<div class="gUniFormSuccessMiddler">
+			  <div class="gUniFormSuccessHeading">Спасибо! <br>Ваша заявка принята</div>
+			  <div class="gUniFormSuccessText">Мы обязательно свяжемся с вами в рабочее время.</div>
+			  <div class="gUniFormButtonContainter">
+			    <a href="#" class="gUniFormSuccessButton gUniFormExit">Закрыть</a>
+			  </div>
+			  <a href="#" class="gUniFormSuccessExit gUniFormExit"></a>
+			</div>
+		      </div>
+		    </div>
+		</div>
 	
 	
     </div>

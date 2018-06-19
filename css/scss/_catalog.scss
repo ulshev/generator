@@ -247,6 +247,7 @@
 		margin-bottom: 50px;
 		margin-top: 50px;
 		color: #0d121f;
+		text-align: left;
 		
 		.img {
 			height: 300px;
@@ -267,6 +268,10 @@
 		a {
 			text-decoration: none;
 			color: #0d121f;
+		}
+		
+		h5 a:hover {
+			text-decoration: underline;
 		}
 		
 		.button {
@@ -309,6 +314,23 @@
 		}
 	}
     }
+    
+    .content .filter.form_block {
+	width: 250px;
+	
+    }
+    .indent {
+	margin-left: 300px;
+    }
+    .content .sort.form_block {
+	padding: 10px 25px;
+	margin: 0 0 0 -25px;
+	
+	select {
+		max-width: 200px;
+		margin-right: 29px;
+	}
+    }
 }
 @media screen and (max-width: 1000px) {
     #catalog {
@@ -327,6 +349,25 @@
 		}
 	}
     }
+    .content .sort.form_block {
+	input[type="radio"] + label {
+		margin-top: 20px;
+		margin-right: 10px;
+	}
+    }
+    .catalog_items {
+	
+	.item {
+		width: 45%;
+		margin-top: 20px;
+		
+		.img {
+			height: 280px;
+			line-height: 280px;
+			margin-bottom: 20px;
+		}
+	}
+    }
 }
 
 
@@ -338,6 +379,34 @@
 		.info {
 			padding: 0 30/505*100%;
 			bottom: 15px;
+		}
+	}
+    }
+    .content .filter.form_block {
+	width: 200px;
+	margin-left: -20px;
+	
+	.filter_block_title {
+		font-size: 16px;
+	}
+    }
+    .content .sort.form_block {
+	margin-right: -20px;
+	font-size: 14px;
+    }
+    .indent {
+	margin-left: 200px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .catalog_items {
+	.item {
+		margin-top: 0px;
+		
+		.img {
+			height: 230px;
+			line-height: 230px;
+			margin-bottom: 20px;
 		}
 	}
     }
@@ -370,6 +439,34 @@
 	}
 	
     }
+    .content .filter.form_block {
+	display: none;
+    }
+    .indent {
+	margin-left: 0px;
+    }
+    .catalog_items {
+	
+	.item {
+		width: 30%;
+		
+		p {
+			margin-bottom: 5px;
+		}
+		
+		.button {
+			margin-top: 10px;
+		}
+		h5 {
+			margin-bottom: 10px;
+		}
+		.img {
+			height: 200px;
+			line-height: 200px;
+			margin-bottom: 10px;
+		}
+	}
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -378,5 +475,36 @@
 		height: 150px;
 	}
 	
+    }
+    .content .sort.form_block {
+	padding-right: 10px;
+	
+	select {
+		max-width: 180px;
+		margin-right: 10px;
+		margin-left: 5px;
+	}
+    }
+    .catalog_items {
+	
+	.item {
+		width: 45%;
+		
+		p {
+			margin-bottom: 5px;
+		}
+		
+		.button {
+			margin-top: 10px;
+		}
+		h5 {
+			margin-bottom: 10px;
+		}
+		.img {
+			height: 200px;
+			line-height: 200px;
+			margin-bottom: 10px;
+		}
+	}
     }
 }

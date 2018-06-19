@@ -81,6 +81,9 @@
 	    &.name, &.tel {
 		background-image: none;
 	    }
+	     &:focus, &:active {
+	    background-color: #fff;
+	}
 	}
 	
 	input {

@@ -45,7 +45,7 @@
 	
 	
 	&:hover, &:focus, &:active {
-	    //background-color: transparent;
+	    //background-color: #fff;;
 	}
 	
 	&.name {
@@ -245,6 +245,7 @@
 	}
 	&:hover {
 	    background: $color_a;
+	    border-color: $color_a;
 	}
     }
     
@@ -256,7 +257,7 @@
     }
     
     .personalInfo {
-	margin-right: -35px;
+	//margin-right: -35px;
     }
     
 }

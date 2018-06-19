@@ -13,17 +13,12 @@
 	    line-height: 480px;
 	    background: no-repeat center / contain;
 	    margin-bottom: 20px;
-	    //margin-left: 145px;
-	    //width: 642px;
 	    text-align: center;
-	    //background-color: #fff;
-	    //border: 1px solid #e6e6e6;
 	    overflow: hidden;
 	    
 	    float: right;
 	    width: 555/780*100%;
 	    margin-right: 65/780*100%;
-	    //box-shadow: 0 0 30px rgba(0,0,0,0.14);
 	    
 	    
 	    .slick-list {
@@ -57,11 +52,9 @@
 	}
 	.small_images {
 	    float: left;
-	    width: 140px;
+	    width: 20.513%;//140px;
 	    height: 345px;
 	    position: relative;
-	    //top: 50%;
-	    //margin-top: 70px;
 	    
 	    .slick-list {
 		margin: 0px;
@@ -213,5 +206,111 @@
 	td:first-child {
 		font-weight: 500;
 	}
+    }
+}
+
+
+
+
+@media screen and (max-width: 1600px) {
+    .products_images {
+	.main_img {
+	    width: calc(78% - 30px);
+	    margin-right: 30px;
+	}
+	.small_images {
+	    width: 21%;
+	}
+    }
+}
+@media screen and (max-width: 1000px) {
+    
+    .products_images {
+	padding-top: 80px;
+	padding-bottom: 40px;
+	
+	
+	.main_img {
+	    width: 100%;
+	    margin-right: 0;
+	    float: none
+	}
+	.small_images {
+	    float: none;
+	    width: 100%;
+	    height: 115px;
+	    top: 0%;
+	    margin-top: 20px;
+	    overflow: hidden;
+	}
+	
+    }
+    .products_info {
+	margin-left: 50%;
+	margin-bottom: 20px;
+    }
+    .products_info_more {
+	margin-bottom: 20px;
+	
+	.tab_buttons {
+	    .tab_but {
+		font-size: 18px;
+		margin-right: 5%;
+	    }
+	    
+	    .tab_but {
+		padding-bottom: 20px;
+	    }
+	}
+    }
+}
+@media screen and (max-width: 800px) {
+    .products_images {
+	padding-bottom: 0;
+	.main_img {
+	    height: 400px;
+	    line-height: 400px;
+	}
+	
+    }
+    .products_info_more {
+	.tab_buttons {
+	    .tab_but {
+		font-size: 16px;
+		margin-right: 3%;
+	    }
+	}
+    }
+}
+@media screen and (max-width: 600px) {
+    .products_images {
+	float: none;
+	width: auto;
+	padding-top: 0;
+	
+	&:before {
+	    right: -30px;
+	}
+    }
+    .products_info {
+	margin-left: 0;
+    }
+    
+    .products_info_more {
+	.tab_buttons {
+	    .tab_but {
+		font-size: 14px;
+	    }
+	}
+	table.left {
+		width: 100%;
+	}
+    }
+}
+
+@media screen and (max-width: 450px) {
+    
+    .products_info_more {
+	
     }
 }
